@@ -8,11 +8,11 @@ import Registration from "./auth/RegisterAccount";
 // import ArticlesForm from "./articles/ArticlesForm";
 // import EventForm from "./events/EventForm";
 // import MessageForm from "./messages/MessageForm";
-// import TaskForm from './tasks/TaskForm';
+import SearchForm from './search/Searchform';
 // // *****************  LIST  ***********************
 // import ArticlesList from "./articles/ArticlesList";
 // import EventsList from "./events/EventsList";
-// import MessagesList from "./messages/MessagesList";
+import MyList from "./savedList/SavedList";
 // import TasksList from "./tasks/TasksList"
 // import FriendsList from "./friends/FriendsList";
 // // *****************  EDIT  ***********************
@@ -56,11 +56,11 @@ export default class ApplicationViews extends Component {
             }
           }}
         /> */}
-        {/* MESSAGES */}
-        {/* <Route
-          exact path="/messages" render={props => {
+        {/* LIST */}
+        <Route
+          exact path="/list" render={props => {
             if (this.props.user) {
-              return <MessagesList
+              return <MyList
                 {...props}
                 {...this.props}
               />
@@ -69,13 +69,13 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
-        <Route
+        {/* <Route
           path="/messages/new" render={props => {
             return <MessageForm {...props} />
           }}
-        />
+        /> */}
 
-        <Route
+        {/* <Route
           exact path="/messages/:messageId(\d+)/edit" render={props => {
             return <MessageEditForm {...props} />
           }} /> */}
@@ -85,19 +85,19 @@ export default class ApplicationViews extends Component {
             return <TasksList {...props} />
 
           }}
-        />
-        <Route path="/tasks/new" render={props => {
-          return <TaskForm {...props} />
+        /> */}
+        <Route path="/search" render={props => {
+          return <SearchForm {...props} />
         }}
         />
-        <Route
+        {/* <Route
           path="/tasks/:taskId(\d+)/edit" render={props => {
             return <TaskEditForm {...props} />
           }}
-          />
+          /> */}
 
 
-        <Route
+        {/* <Route
           path="/tasks" render={props => {
             return null
             // Remove null and return the component which will show the user's tasks
