@@ -2,52 +2,32 @@ import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 
 class SearchForm extends Component {
-    // declare state for every single input field
-    state = {
-        name: "",
-        message: "",
-        timestamp: "",
-        loadingStatus: false,
-    };
-    
-    handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value;
-        //the below function updates the state with every key press:
-        this.setState(stateToChange);
-    };
 
-    refreshPage() {
-        window.location.reload(false);
+    // Set initial state
+    state = {
+        id: "",
+        stateId: "",
     }
 
-    constructNewMessage = evt => {
-        //Retrieve UserId from localStorage and store in variable:
-        const userId = localStorage.getItem("credentials")
-        // Convert the Date.now() milliseconds to a readable date and time:
-        const d = Date(Date.now());
-        const dateTime = d.toString()
+    // Update state whenever an input field is edited
+    handleFieldChange = (evt) => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
 
-        evt.preventDefault();
-        if (this.state.message === "") {
-                window.alert("Please input a message")
-            } else {
-                //disable the button while the Post request is running:
-                this.setState({ loadingStatus: true });
-                const message = {
-                    userId: Number(userId),
-                    message: this.state.message,
-                    timestamp: dateTime
-                }
-
-                ApiManager.post("messages", message)
-                .then(() => {
-                    this.props.updateMessages()
-                    this.setState({ loadingStatus: false })
-                });
-                //^ reload Messages list after post request is done
-            }
-    };
+    searchNurse = e => {
+    e.preventDefault()
+    ApiManager.get(this.state.id, this.state.stateId)
+    .then(results=>{
+        if(results.length>0) {
+            this.props.setUser(results)
+            this.props.history.push("/");
+        } else {
+            alert("please enter all fields")
+        } 
+    })
+}
 
     render(){
         return (
@@ -60,14 +40,13 @@ class SearchForm extends Component {
                             required
                             rows="1"
                             cols="10"
-                            onChange={this.handleFieldChange}
-                            id="message"
+                            id="id"
                             placeholder="License #"
                         />
                     </div>
                     <div>
                     <fieldset>
-                        <select>
+                        <select id="stateId">
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
@@ -126,8 +105,8 @@ class SearchForm extends Component {
                         <button
                             type="button"
                             className="btn btn-primary"
-                            disabled={this.state.loadingStatus}
-                            onClick={this.constructNewMessage}
+                            // disabled={this.state.loadingStatus}
+                            // onClick={this.constructNewMessage}
                         >Submit</button>
                     </div>
                 </fieldset>

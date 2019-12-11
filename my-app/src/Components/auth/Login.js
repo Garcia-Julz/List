@@ -17,7 +17,6 @@ class Login extends Component {
         this.setState(stateToChange)
     }
 
-
     handleLogin = e => {
     e.preventDefault()
     ApiManager.checkUser(this.state.email, this.state.password)

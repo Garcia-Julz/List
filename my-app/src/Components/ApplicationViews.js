@@ -24,6 +24,7 @@ import MyList from "./savedList/SavedList";
 export default class ApplicationViews extends Component {
 
   render() {
+      
     return (
       <React.Fragment>
         {/* Home and Authentication */}

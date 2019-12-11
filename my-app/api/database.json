@@ -19,11 +19,11 @@
     "password": "bob"
   }
   ],
-  
-  "Nurses": [
+
+  "registaredNurses": [
 {
   "id": 1,
-  "stateId": 1,
+  "stateId": "fl",
   "first": "Nariko",
   "last": "Mumbey",
   "licenseNumber": "1368949061",
@@ -521,5 +521,213 @@
   "licenseType": "Computer Systems Analyst I",
   "issueDate": null,
   "expireDate": null
+}
+  ],
+  
+  "stateId" [
+  {
+  "id": 1,
+  "stateId": 1,
+  "abv": "MA"
+}, 
+{
+  "id": 2,
+  "stateId": 2,
+  "abv": "VA"
+}, 
+{
+  "id": 3,
+  "stateId": 3,
+  "abv": "CA"
+}, {
+  "id": 4,
+  "stateId": 4,
+  "abv": "CA"
+}, 
+{
+  "id": 5,
+  "stateId": 5,
+  "abv": "AZ"
+}, 
+{
+  "id": 6,
+  "stateId": 6,
+  "abv": "IN"
+}, {
+  "id": 7,
+  "stateId": 7,
+  "abv": "CA"
+}, {
+  "id": 8,
+  "stateId": 8,
+  "abv": "TN"
+}, {
+  "id": 9,
+  "stateId": 9,
+  "abv": "CA"
+}, {
+  "id": 10,
+  "stateId": 10,
+  "abv": "TX"
+}, {
+  "id": 11,
+  "stateId": 11,
+  "abv": "CA"
+}, {
+  "id": 12,
+  "stateId": 12,
+  "abv": "TX"
+}, {
+  "id": 13,
+  "stateId": 13,
+  "abv": "WA"
+}, {
+  "id": 14,
+  "stateId": 14,
+  "abv": "VA"
+}, {
+  "id": 15,
+  "stateId": 15,
+  "abv": "MO"
+}, {
+  "id": 16,
+  "stateId": 16,
+  "abv": "FL"
+}, {
+  "id": 17,
+  "stateId": 17,
+  "abv": "GA"
+}, {
+  "id": 18,
+  "stateId": 18,
+  "abv": "CA"
+}, {
+  "id": 19,
+  "stateId": 19,
+  "abv": "AZ"
+}, {
+  "id": 20,
+  "stateId": 20,
+  "abv": "CO"
+}, {
+  "id": 21,
+  "stateId": 21,
+  "abv": "MD"
+}, {
+  "id": 22,
+  "stateId": 22,
+  "abv": "OH"
+}, {
+  "id": 23,
+  "stateId": 23,
+  "abv": "CA"
+}, {
+  "id": 24,
+  "stateId": 24,
+  "abv": "NY"
+}, {
+  "id": 25,
+  "stateId": 25,
+  "abv": "TN"
+}, {
+  "id": 26,
+  "stateId": 26,
+  "abv": "DC"
+}, {
+  "id": 27,
+  "stateId": 27,
+  "abv": "FL"
+}, {
+  "id": 28,
+  "stateId": 28,
+  "abv": "NY"
+}, {
+  "id": 29,
+  "stateId": 29,
+  "abv": "UT"
+}, {
+  "id": 30,
+  "stateId": 30,
+  "abv": "TX"
+}, {
+  "id": 31,
+  "stateId": 31,
+  "abv": "FL"
+}, {
+  "id": 32,
+  "stateId": 32,
+  "abv": "CA"
+}, {
+  "id": 33,
+  "stateId": 33,
+  "abv": "TX"
+}, {
+  "id": 34,
+  "stateId": 34,
+  "abv": "MO"
+}, {
+  "id": 35,
+  "stateId": 35,
+  "abv": "CA"
+}, {
+  "id": 36,
+  "stateId": 36,
+  "abv": "PA"
+}, {
+  "id": 37,
+  "stateId": 37,
+  "abv": "NE"
+}, {
+  "id": 38,
+  "stateId": 38,
+  "abv": "PA"
+}, {
+  "id": 39,
+  "stateId": 39,
+  "abv": "PA"
+}, {
+  "id": 40,
+  "stateId": 40,
+  "abv": "FL"
+}, {
+  "id": 41,
+  "stateId": 41,
+  "abv": "CT"
+}, {
+  "id": 42,
+  "stateId": 42,
+  "abv": "KS"
+}, {
+  "id": 43,
+  "stateId": 43,
+  "abv": "MI"
+}, {
+  "id": 44,
+  "stateId": 44,
+  "abv": "CA"
+}, {
+  "id": 45,
+  "stateId": 45,
+  "abv": "TX"
+}, {
+  "id": 46,
+  "stateId": 46,
+  "abv": "VA"
+}, {
+  "id": 47,
+  "stateId": 47,
+  "abv": "TX"
+}, {
+  "id": 48,
+  "stateId": 48,
+  "abv": "FL"
+}, {
+  "id": 49,
+  "stateId": 49,
+  "abv": "NY"
+}, {
+  "id": 50,
+  "stateId": 50,
+  "abv": "DC"
 }]
 }
