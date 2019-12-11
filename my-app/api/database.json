@@ -524,7 +524,7 @@
 }
   ],
   
-  "stateCodes" [
+  "stateCodes": [
   {
   "id": 1,
   "stateId": 1,
@@ -774,5 +774,5 @@
   "id": 50,
   "stateId": 50,
   "abv": "WY"
-}]
+  }]
 }

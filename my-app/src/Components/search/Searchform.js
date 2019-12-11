@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 
+
 class SearchForm extends Component {
 
     // Set initial state
     state = {
         id: "",
         stateId: "",
+        abv: "",
+        stateCodes: []
     }
 
     // Update state whenever an input field is edited
@@ -14,6 +17,16 @@ class SearchForm extends Component {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
+    }
+
+    componentDidMount() {
+        ApiManager.getAll("stateCodes")
+          .then(stateCodes => {
+            //   console.log("hi", stateCodes)
+            this.setState({
+                stateCodes: stateCodes
+            });
+          });
     }
 
     render(){
@@ -39,8 +52,8 @@ class SearchForm extends Component {
                         value={this.state.stateId}
                         onChange={this.handleFieldChange}
                     >
-                        {this.state.stateCodes.map(states =>
-                        <option key={states.id} value={states.id}>
+                        {this.state.stateCodes.map(states => 
+                        <option key={states.stateId} value={states.stateId}>
                             {states.abv}
                         </option>
                         )}
