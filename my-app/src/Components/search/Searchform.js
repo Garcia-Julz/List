@@ -7,8 +7,10 @@ class SearchForm extends Component {
     // Set initial state
     state = {
         id: "",
+        licenseNumber: "",
         stateId: "",
         abv: "",
+        loadingStatus: false,
         stateCodes: []
     }
 
@@ -22,11 +24,25 @@ class SearchForm extends Component {
     componentDidMount() {
         ApiManager.getAll("stateCodes")
           .then(stateCodes => {
-            //   console.log("hi", stateCodes)
             this.setState({
-                stateCodes: stateCodes
+                stateCodes: stateCodes,
+                loadingStatus: false
             });
           });
+    }
+
+    searchNurse = evt => {
+        evt.preventDefault()
+        this.setState({ loadingStatus: false });
+        const nurseSearchDetails = {
+            license: this.state.licenseNumber,
+            stateId: this.state.stateId,
+            // nurseStateId: 
+        };
+        console.log("EVT", nurseSearchDetails)
+    
+        ApiManager.getAll("registaredNurses", nurseSearchDetails)
+          .then(() => this.props.history.push("/search"))
     }
 
     render(){
@@ -38,10 +54,10 @@ class SearchForm extends Component {
                         <input
                             type="text"
                             required
-                            rows="1"
-                            cols="10"
-                            id="id"
+                            value={this.state.licenseNumber}
+                            id="licenseNumber"
                             placeholder="License #"
+                            onChange={this.handleFieldChange}
                         />
                     </div>
                     <div>
@@ -64,8 +80,8 @@ class SearchForm extends Component {
                         <button
                             type="button"
                             className="btn btn-primary"
-                            // disabled={this.state.loadingStatus}
-                            // onClick={this.constructNewMessage}
+                            disabled={this.state.loadingStatus}
+                            onClick={this.searchNurse}
                         >Submit</button>
                     </div>
                 </fieldset>
