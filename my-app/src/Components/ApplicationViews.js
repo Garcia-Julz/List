@@ -9,12 +9,10 @@ import Registration from "./auth/RegisterAccount";
 // import EventForm from "./events/EventForm";
 // import MessageForm from "./messages/MessageForm";
 import SearchForm from './search/Searchform';
-
-import SearchFormResults from './search/SearchFormResults';
 // // *****************  LIST  ***********************
 // import ArticlesList from "./articles/ArticlesList";
 // import EventsList from "./events/EventsList";
-import MyList from "./savedList/SavedList";
+import SavedList from "./savedList/SavedList";
 // import TasksList from "./tasks/TasksList"
 // import FriendsList from "./friends/FriendsList";
 // // *****************  EDIT  ***********************
@@ -61,9 +59,9 @@ export default class ApplicationViews extends Component {
         /> */}
         {/* LIST */}
         <Route
-          exact path="/list" render={props => {
+          exact path="/mylist" render={props => {
             if (this.props.user) {
-              return <MyList
+              return <SavedList
                 {...props}
                 {...this.props}
               />
@@ -93,10 +91,10 @@ export default class ApplicationViews extends Component {
           return <SearchForm {...props} />
         }}
         />
-        <Route path="/searchresults" render={props => {
+        {/* <Route path="/searchresults" render={props => {
           return <SearchFormResults {...props} />
         }}
-        />
+        /> */}
         {/* <Route
           path="/tasks/:taskId(\d+)/edit" render={props => {
             return <TaskEditForm {...props} />

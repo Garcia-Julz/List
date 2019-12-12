@@ -86,12 +86,16 @@ class SearchForm extends Component {
                             className="btn btn-primary"
                             disabled={this.state.loadingStatus}
                             onClick={this.searchNurse}
-                        >Submit</button>
+                        >Search</button>
                     </div>
                 </fieldset>
                 <div className="result-container">
                 {this.state.registeredNurses.map(nurse =>
-                <NurseCard key={nurse.id} nurse={nurse} />
+                <NurseCard 
+                key={nurse.id} 
+                nurse={nurse} 
+                {...this.props}
+                />
                 )}
                 </div>
             </form>
