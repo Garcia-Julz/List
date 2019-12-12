@@ -23,7 +23,7 @@
   "registaredNurses": [
 {
   "id": 1,
-  "stateId": "fl",
+  "stateId": 1,
   "first": "Nariko",
   "last": "Mumbey",
   "licenseNumber": "1368949061",
@@ -527,7 +527,7 @@
   "stateCodes": [
   {
   "id": 1,
-  "stateId": 111,
+  "stateId": 1,
   "abv": "AL"
 }, 
 {
