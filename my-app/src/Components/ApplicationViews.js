@@ -9,6 +9,8 @@ import Registration from "./auth/RegisterAccount";
 // import EventForm from "./events/EventForm";
 // import MessageForm from "./messages/MessageForm";
 import SearchForm from './search/Searchform';
+
+import SearchFormResults from './search/SearchFormResults';
 // // *****************  LIST  ***********************
 // import ArticlesList from "./articles/ArticlesList";
 // import EventsList from "./events/EventsList";
@@ -87,8 +89,12 @@ export default class ApplicationViews extends Component {
 
           }}
         /> */}
-        <Route path="/search" render={props => {
+        <Route exact path="/search" render={props => {
           return <SearchForm {...props} />
+        }}
+        />
+        <Route path="/searchresults" render={props => {
+          return <SearchFormResults {...props} />
         }}
         />
         {/* <Route

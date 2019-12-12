@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
-
+import NurseCard from './SearchResult';
 
 class SearchForm extends Component {
 
@@ -11,7 +11,8 @@ class SearchForm extends Component {
         stateId: "",
         abv: "",
         loadingStatus: false,
-        stateCodes: []
+        stateCodes: [],
+        registeredNurses: []
     }
 
     // Update state whenever an input field is edited
@@ -39,11 +40,14 @@ class SearchForm extends Component {
             stateId: this.state.stateId,
             // nurseStateId: 
         };
-        console.log("EVT", nurseSearchDetails)
+        // console.log("EVT", nurseSearchDetails)
     
-        ApiManager.getAll("registaredNurses", nurseSearchDetails)
-          .then(() => this.props.history.push("/search"))
-    }
+        ApiManager.getNurse("registeredNurses", nurseSearchDetails.stateId, nurseSearchDetails.license)
+        .then((nurse) => this.setState ({
+            registeredNurses: nurse
+        })
+        //   .then(() => this.props.history.push("/searchresult"))
+        )}
 
     render(){
         return (
@@ -85,6 +89,11 @@ class SearchForm extends Component {
                         >Submit</button>
                     </div>
                 </fieldset>
+                <div className="result-container">
+                {this.state.registeredNurses.map(nurse =>
+                <NurseCard key={nurse.id} nurse={nurse} />
+                )}
+                </div>
             </form>
             </>
         )

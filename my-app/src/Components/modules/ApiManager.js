@@ -20,6 +20,9 @@ export default {
     getAllWithUserNames(tableName, userId) {
         return fetch(`${remoteURL}/${tableName}?_expand=user`).then(result => result.json(userId))
     },
+    getNurse(tableName, stateId, licenseNumber) {
+        return fetch(`${remoteURL}/${tableName}?stateId=${stateId}&&licenseNumber=${licenseNumber}`).then(result => result.json())
+    },
 
     delete(tableName, id) {
         // This fetch call grabs the id of a single object and deletes it from tableName. 
