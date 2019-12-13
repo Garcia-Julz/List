@@ -7,7 +7,7 @@ class NurseCard extends Component {
         evt.preventDefault();
             const nurse = {
                 rnId: this.props.nurse.id,
-                userId: (localStorage.getItem("credentials")),
+                userId: Number(localStorage.getItem("credentials")),
                 notes: ""
             }
             ApiManager.post("saved", nurse)
