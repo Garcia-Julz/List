@@ -7,7 +7,8 @@ import ApiManager from "./Components/modules/ApiManager";
 class List extends Component {
   // user doesn't exist by default
   state = {
-    user: false
+    user: false,
+    userId: (localStorage.getItem("credentials").id)
   }
 
   // isAuthenticated checks if credentials are in local storage
@@ -15,6 +16,7 @@ class List extends Component {
   isAuthenticated = () => localStorage.getItem("credentials") !== null
 
   setUser = (results) => {
+    // console.log("auth", results[0].id)
     localStorage.setItem("credentials", results[0].id)
     this.setState({
       user: this.isAuthenticated()

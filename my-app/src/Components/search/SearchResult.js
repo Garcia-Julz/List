@@ -6,8 +6,8 @@ class NurseCard extends Component {
     saveNurse = evt => {
         evt.preventDefault();
             const nurse = {
-                rnId: this.props.id,
-                userId: JSON.parse(localStorage.getItem("credentials")).userId,
+                rnId: this.props.nurse.id,
+                userId: (localStorage.getItem("credentials")),
                 notes: ""
             }
             ApiManager.post("saved", nurse)
@@ -16,7 +16,20 @@ class NurseCard extends Component {
                     console.log("hello", nurse)
     }
 
+    componentDidMount() {
+        const currentUser = localStorage.getItem("credentials")
+        ApiManager.getAll("stateCodes")
+          .then(stateCodes => {
+            this.setState({
+                userId: currentUser.id,
+                stateCodes: stateCodes,
+                loadingStatus: false
+            });
+          });
+    }
+
     render() {
+        console.log("searchresults this.props", this.props)
         return (
           <div className="card">
               <div className="card-content">

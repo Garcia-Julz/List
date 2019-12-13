@@ -23,9 +23,11 @@ class SearchForm extends Component {
     }
 
     componentDidMount() {
+        const currentUser = localStorage.getItem("credentials")
         ApiManager.getAll("stateCodes")
           .then(stateCodes => {
             this.setState({
+                userId: currentUser.id,
                 stateCodes: stateCodes,
                 loadingStatus: false
             });

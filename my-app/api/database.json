@@ -17,6 +17,12 @@
       "name": "Bob",
       "email": "bob@ilovebob.com",
       "password": "bob"
+    },
+    {
+      "name": "julian",
+      "email": "Garcia.j.julian@gmail.com",
+      "password": "123",
+      "id": 4
     }
   ],
   "registeredNurses": [
@@ -36,7 +42,7 @@
       "stateId": 1,
       "first": "2nd nurse",
       "last": "Mumbey",
-      "licenseNumber": "500000",
+      "licenseNumber": "2",
       "licenseStatus": "ACTIVE",
       "licenseType": "VP Product Management",
       "issueDate": null,
@@ -47,7 +53,7 @@
       "stateId": 2,
       "first": "Ianthe",
       "last": "Kearns",
-      "licenseNumber": "5113821640",
+      "licenseNumber": "2",
       "licenseStatus": "ACTIVE",
       "licenseType": "Administrative Officer",
       "issueDate": null,
@@ -838,6 +844,86 @@
     {
       "notes": "",
       "id": 1
+    },
+    {
+      "notes": "",
+      "id": 2
+    },
+    {
+      "notes": "",
+      "id": 3
+    },
+    {
+      "notes": "",
+      "id": 4
+    },
+    {
+      "notes": "",
+      "id": 5
+    },
+    {
+      "rnId": 2,
+      "notes": "",
+      "id": 6
+    },
+    {
+      "rnId": 17,
+      "notes": "",
+      "id": 7
+    },
+    {
+      "rnId": 170,
+      "notes": "",
+      "id": 8
+    },
+    {
+      "rnId": 17,
+      "notes": "",
+      "id": 9
+    },
+    {
+      "rnId": 2,
+      "notes": "",
+      "id": 10
+    },
+    {
+      "rnId": 2,
+      "notes": "",
+      "id": 11
+    },
+    {
+      "rnId": 2,
+      "notes": "",
+      "id": 12
+    },
+    {
+      "rnId": 2,
+      "userId": "[object Object]",
+      "notes": "",
+      "id": 13
+    },
+    {
+      "rnId": 2,
+      "userId": "[object Object]",
+      "notes": "",
+      "id": 14
+    },
+    {
+      "rnId": 2,
+      "notes": "",
+      "id": 15
+    },
+    {
+      "rnId": 2,
+      "userId": "2",
+      "notes": "",
+      "id": 16
+    },
+    {
+      "rnId": 1,
+      "userId": "4",
+      "notes": "",
+      "id": 17
     }
   ]
 }
