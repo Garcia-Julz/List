@@ -8,7 +8,6 @@ class SavedList extends Component {
         savedNurses: [],
     }
 
-
     // deleteNurse = id => {
     //     ApiManager.delete("saved", id)
     //     .then(() => {
@@ -25,26 +24,32 @@ class SavedList extends Component {
         // console.log("SAVED LIST: ComponentDidMount");
         //getAll from ApiManager and hang on to that data; put it in state
         ApiManager.getSavedNurses("saved")
-        .then((savedNurses) => {
+        .then((savedNurse) => {
+            let nurseArray = []
+            savedNurse.forEach(idividualNurse => {
+                nurseArray.push(idividualNurse.nurse)
+            });
+            console.log(savedNurse)
             this.setState({
-                savedNurses: savedNurses
+                savedNurses: nurseArray
             })
+            console.log(this.state.savedNurses)
         })
     }
 
     render() {
-            console.log(this.state.savedNurses)
         return (
         <>
         <div className="card-container">
-            {this.state.savedNurses.map(nurse =>
-                <NurseCard
+            {this.state.savedNurses.map(nurse => {
+                // console.log("hello", nurse)
+            return <NurseCard
                 key={nurse.id}
                 nurse={nurse}
                 deleteNurse={this.deleteNurse}
                 {...this.props}
                 />
-            )}
+            })}
         </div>
         </>
         )

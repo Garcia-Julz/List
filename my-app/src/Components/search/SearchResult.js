@@ -29,7 +29,6 @@ class NurseCard extends Component {
     }
 
     render() {
-        console.log("searchresults this.props", this.props)
         return (
           <div className="card">
               <div className="card-content">

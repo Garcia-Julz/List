@@ -24,7 +24,7 @@ export default {
         return fetch(`${remoteURL}/${tableName}?stateId=${stateId}&&licenseNumber=${licenseNumber}`).then(result => result.json())
     },
     getSavedNurses(tableName) {
-        return fetch(`${remoteURL}/${tableName}`).then(result => result.json())
+        return fetch(`${remoteURL}/${tableName}/?_expand=nurse`).then(result => result.json())
     },
 
     delete(tableName, id) {

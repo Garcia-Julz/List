@@ -842,51 +842,34 @@
   ],
   "saved": [
     {
+      "nurseId": 1,
+      "userId": 4,
+      "notes": "",
+      "id": 16
+    },
+    {
       "nurseId": 2,
-      "notes": "",
-      "id": 15
-    },
-    {
-      "rnId": 43,
       "userId": 4,
       "notes": "",
-      "id": 126
+      "id": 1671
     },
     {
-      "rnId": 21,
+      "nurseId": 3,
       "userId": 4,
       "notes": "",
-      "id": 161
+      "id": 1672
     },
     {
-      "rnId": 22,
+      "nurseId": 4,
       "userId": 4,
       "notes": "",
-      "id": 146
+      "id": 1673
     },
     {
-      "rnId": 23,
-      "userId": 4,
-      "notes": "",
-      "id": 6
-    },
-    {
-      "rnId": 24,
+      "nurseId": 5,
       "userId": 4,
       "notes": "",
       "id": 164
-    },
-    {
-      "rnId": 51,
-      "userId": 4,
-      "notes": "",
-      "id": 165
-    },
-    {
-      "nurseId": 2,
-      "userId": 4,
-      "notes": "",
-      "id": 166
     }
   ]
 }
