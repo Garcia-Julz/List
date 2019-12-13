@@ -12,7 +12,7 @@ class SearchForm extends Component {
         abv: "",
         loadingStatus: false,
         stateCodes: [],
-        registeredNurses: []
+        nurses: []
     }
 
     // Update state whenever an input field is edited
@@ -44,9 +44,9 @@ class SearchForm extends Component {
         };
         // console.log("EVT", nurseSearchDetails)
     
-        ApiManager.getNurse("registeredNurses", nurseSearchDetails.stateId, nurseSearchDetails.license)
-        .then((nurse) => this.setState ({
-            registeredNurses: nurse
+        ApiManager.getNurse("nurses", nurseSearchDetails.stateId, nurseSearchDetails.license)
+        .then((showNurse) => this.setState ({
+            nurses: showNurse
         })
         //   .then(() => this.props.history.push("/searchresult"))
         )}
@@ -92,7 +92,7 @@ class SearchForm extends Component {
                     </div>
                 </fieldset>
                 <div className="result-container">
-                {this.state.registeredNurses.map(nurse =>
+                {this.state.nurses.map(nurse =>
                 <NurseCard 
                 key={nurse.id} 
                 nurse={nurse} 

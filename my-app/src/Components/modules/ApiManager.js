@@ -23,6 +23,9 @@ export default {
     getNurse(tableName, stateId, licenseNumber) {
         return fetch(`${remoteURL}/${tableName}?stateId=${stateId}&&licenseNumber=${licenseNumber}`).then(result => result.json())
     },
+    getSavedNurses(tableName) {
+        return fetch(`${remoteURL}/${tableName}`).then(result => result.json())
+    },
 
     delete(tableName, id) {
         // This fetch call grabs the id of a single object and deletes it from tableName. 

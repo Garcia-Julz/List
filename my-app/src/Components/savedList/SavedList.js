@@ -21,18 +21,19 @@ class SavedList extends Component {
     //     })
     // }
 
-    // componentDidMount(){
-    //     // console.log("SAVED LIST: ComponentDidMount");
-    //     //getAll from ApiManager and hang on to that data; put it in state
-    //     ApiManager.getAll()
-    //     .then((savedNurses) => {
-    //         this.setState({
-    //             savedNurses: savedNurses
-    //         })
-    //     })
-    // }
+    componentDidMount(){
+        // console.log("SAVED LIST: ComponentDidMount");
+        //getAll from ApiManager and hang on to that data; put it in state
+        ApiManager.getSavedNurses("saved")
+        .then((savedNurses) => {
+            this.setState({
+                savedNurses: savedNurses
+            })
+        })
+    }
 
     render() {
+            console.log(this.state.savedNurses)
         return (
         <>
         <div className="card-container">

@@ -25,7 +25,7 @@
       "id": 4
     }
   ],
-  "registeredNurses": [
+  "nurses": [
     {
       "id": 1,
       "stateId": 1,
@@ -842,148 +842,51 @@
   ],
   "saved": [
     {
-      "notes": "",
-      "id": 1
-    },
-    {
-      "notes": "",
-      "id": 2
-    },
-    {
-      "notes": "",
-      "id": 3
-    },
-    {
-      "notes": "",
-      "id": 4
-    },
-    {
-      "notes": "",
-      "id": 5
-    },
-    {
-      "rnId": 2,
-      "notes": "",
-      "id": 6
-    },
-    {
-      "rnId": 17,
-      "notes": "",
-      "id": 7
-    },
-    {
-      "rnId": 170,
-      "notes": "",
-      "id": 8
-    },
-    {
-      "rnId": 17,
-      "notes": "",
-      "id": 9
-    },
-    {
-      "rnId": 2,
-      "notes": "",
-      "id": 10
-    },
-    {
-      "rnId": 2,
-      "notes": "",
-      "id": 11
-    },
-    {
-      "rnId": 2,
-      "notes": "",
-      "id": 12
-    },
-    {
-      "rnId": 2,
-      "userId": "[object Object]",
-      "notes": "",
-      "id": 13
-    },
-    {
-      "rnId": 2,
-      "userId": "[object Object]",
-      "notes": "",
-      "id": 14
-    },
-    {
-      "rnId": 2,
+      "nurseId": 2,
       "notes": "",
       "id": 15
     },
     {
-      "rnId": 2,
-      "userId": "2",
-      "notes": "",
-      "id": 16
-    },
-    {
-      "rnId": 1,
-      "userId": "4",
-      "notes": "",
-      "id": 17
-    },
-    {
-      "rnId": 2,
-      "userId": "4",
-      "notes": "",
-      "id": 18
-    },
-    {
-      "rnId": 2,
-      "userId": "4",
-      "notes": "",
-      "id": 19
-    },
-    {
-      "rnId": 2,
-      "userId": "4",
-      "notes": "",
-      "id": 20
-    },
-    {
-      "rnId": 2,
-      "userId": "4",
-      "notes": "",
-      "id": 21
-    },
-    {
-      "rnId": 2,
-      "userId": "4",
-      "notes": "",
-      "id": 22
-    },
-    {
-      "rnId": 2,
-      "userId": "4",
-      "notes": "",
-      "id": 23
-    },
-    {
-      "rnId": 2,
-      "userId": "4",
-      "notes": "",
-      "id": 24
-    },
-    {
-      "rnId": 2,
-      "userId": "4",
-      "notes": "",
-      "id": 25
-    },
-    {
-      "rnId": 2,
+      "rnId": 43,
       "userId": 4,
       "notes": "",
-      "id": 26
+      "id": 126
     },
     {
-      "rnId": 2,
+      "rnId": 21,
       "userId": 4,
       "notes": "",
-      "id": 27
+      "id": 161
+    },
+    {
+      "rnId": 22,
+      "userId": 4,
+      "notes": "",
+      "id": 146
+    },
+    {
+      "rnId": 23,
+      "userId": 4,
+      "notes": "",
+      "id": 6
+    },
+    {
+      "rnId": 24,
+      "userId": 4,
+      "notes": "",
+      "id": 164
+    },
+    {
+      "rnId": 51,
+      "userId": 4,
+      "notes": "",
+      "id": 165
+    },
+    {
+      "nurseId": 2,
+      "userId": 4,
+      "notes": "",
+      "id": 166
     }
   ]
 }
