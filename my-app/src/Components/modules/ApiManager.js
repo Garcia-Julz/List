@@ -14,7 +14,7 @@ export default {
         return fetch(`${remoteURL}/${tableName}`).then(result => result.json())
     },
     getAllforLoggedInUser(userId, tableName) {
-        return fetch(`${remoteURL}/users/${userId}/${tableName}`).then(result => result.json())
+        return fetch(`${remoteURL}/users/${userId}/${tableName}/?_expand=nurse`).then(result => result.json())
     },
     // This fetch call uses _expand to get all objects including the name associated with the userId.
     getAllWithUserNames(tableName, userId) {

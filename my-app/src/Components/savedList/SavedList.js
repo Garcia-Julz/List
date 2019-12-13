@@ -2,28 +2,30 @@ import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 import NurseCard from '../search/SearchResult';
 
+const userId = localStorage.getItem("credentials")
+
 class SavedList extends Component {
 
     state = {
-        savedNurses: [],
+        savedNurses: []
     }
 
     // deleteNurse = id => {
-    //     ApiManager.delete("saved", id)
+    //     ApiManager.delete("saved", this.state.savedNurses.id)
     //     .then(() => {
     //         ApiManager.getAll()
-    //       .then(ApiManager.post("saved", id) => {
-    //         this.setState({
-    //             savedNurses: ~~~
-    //         })
-    //       })
+    //     //   .then(~.post("saved", this.state.savedNurses.id) => {
+    //     //     this.setState({
+    //     //         savedNurses: ~
+    //         // })
+    //     //   })
     //     })
     // }
 
     componentDidMount(){
         // console.log("SAVED LIST: ComponentDidMount");
         //getAll from ApiManager and hang on to that data; put it in state
-        ApiManager.getSavedNurses("saved")
+        ApiManager.getAllforLoggedInUser(userId, "saved")
         .then((savedNurse) => {
             let nurseArray = []
             savedNurse.forEach(idividualNurse => {
@@ -33,7 +35,7 @@ class SavedList extends Component {
             this.setState({
                 savedNurses: nurseArray
             })
-            console.log(this.state.savedNurses)
+            // console.log(this.state.savedNurses)
         })
     }
 

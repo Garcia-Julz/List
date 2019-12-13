@@ -55,7 +55,7 @@ class NurseCard extends Component {
               </div>
           </div>
         );
-      }
+    }
 }
 
 export default NurseCard;
