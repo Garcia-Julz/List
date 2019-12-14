@@ -14,12 +14,29 @@ class SavedList extends Component {
     //     ApiManager.delete("saved", this.state.savedNurses.id)
     //     .then(() => {
     //         ApiManager.getAll()
-    //     //   .then(~.post("saved", this.state.savedNurses.id) => {
-    //     //     this.setState({
-    //     //         savedNurses: ~
-    //         // })
-    //     //   })
+    //       .then(~.post("saved", this.state.savedNurses.id) => {
+    //         this.setState({
+    //             savedNurses: ~
+    //         })
+    //       })
     //     })
+    // }
+
+    deleteNurse = id => {
+        // handles deleting a single event from events array and renders updated array to the DOM
+        ApiManager.delete("saved", id)
+            .then(() => {
+                ApiManager.getAllforLoggedInUser(userId, "saved")
+                    .then((updateSavedList) => {
+                        this.setState({
+                            savedNurses: updateSavedList
+                        })
+                    })
+            })
+    }
+
+    // deleteNurse = id => {
+    //     delete this.state.savedNurses[id]
     // }
 
     componentDidMount(){
@@ -28,10 +45,12 @@ class SavedList extends Component {
         ApiManager.getAllforLoggedInUser(userId, "saved")
         .then((savedNurse) => {
             let nurseArray = []
-            savedNurse.forEach(idividualNurse => {
-                nurseArray.push(idividualNurse.nurse)
+            savedNurse.forEach(individualNurse => {
+                // nurseArray.push(individualNurse.nurse)
+                nurseArray[individualNurse.id] = individualNurse.nurse;
+                console.log(individualNurse.nurse)
             });
-            console.log(savedNurse)
+            // console.log(savedNurse)
             this.setState({
                 savedNurses: nurseArray
             })
