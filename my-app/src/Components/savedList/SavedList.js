@@ -10,7 +10,7 @@ class SavedList extends Component {
         savedNurses: []
     }
 
-    // deleteNurse = id => {
+    deleteNurse = id => {
     //     ApiManager.delete("saved", this.state.savedNurses.id)
     //     .then(() => {
     //         ApiManager.getAll()
@@ -20,7 +20,7 @@ class SavedList extends Component {
     //         // })
     //     //   })
     //     })
-    // }
+    }
 
     componentDidMount(){
         // console.log("SAVED LIST: ComponentDidMount");

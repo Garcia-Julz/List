@@ -51,6 +51,13 @@ class NurseCard extends Component {
                     >
                         <span>Save</span>
                     </button>
+                    <button 
+                    type="button"
+                    className="button2"
+                    onClick={this.deleteNurse}
+                    >
+                        <span>Delete</span>
+                    </button>
                 </section>
               </div>
           </div>
