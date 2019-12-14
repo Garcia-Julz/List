@@ -16,6 +16,10 @@ class NurseCard extends Component {
                 //     console.log("hello", nurse)
     }
 
+    // deleteNurse = id => {
+    //     delete this.state.savedNurses[id];
+    // }
+
     componentDidMount() {
         const currentUser = localStorage.getItem("credentials")
         ApiManager.getAll("stateCodes")
@@ -51,6 +55,21 @@ class NurseCard extends Component {
                     >
                         <span>Save</span>
                     </button>
+                    <button 
+                    type="button"
+                    className="button2"
+                    onClick= {() => 
+                        this.props.deleteNurse(this.props.nurse.id)}
+                    >
+                        <span>Delete</span>
+                    </button>
+                    {/* <button 
+                    type="button"
+                    className="button2"
+                    onClick={this.saveNurse}
+                    >
+                        <span>Edit</span>
+                    </button> */}
                 </section>
               </div>
           </div>
