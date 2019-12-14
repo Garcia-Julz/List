@@ -1,0 +1,887 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "J",
+      "email": "jisie@rocks.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Rose",
+      "email": "Rose@rocks.com",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "name": "Bob",
+      "email": "bob@ilovebob.com",
+      "password": "bob"
+    },
+    {
+      "name": "julian",
+      "email": "Garcia.j.julian@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "123",
+      "email": "123@123.com",
+      "password": "123",
+      "id": 5
+    }
+  ],
+  "nurses": [
+    {
+      "id": 1,
+      "stateId": 1,
+      "first": "Nariko",
+      "last": "Mumbey",
+      "licenseNumber": "1",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "VP Product Management",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 51,
+      "stateId": 1,
+      "first": "2nd nurse",
+      "last": "Mumbey",
+      "licenseNumber": "2",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "VP Product Management",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 2,
+      "stateId": 2,
+      "first": "Ianthe",
+      "last": "Kearns",
+      "licenseNumber": "2",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Administrative Officer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 3,
+      "stateId": 3,
+      "first": "Oliver",
+      "last": "Longmate",
+      "licenseNumber": "9860550131",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "VP Sales",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 4,
+      "stateId": 4,
+      "first": "Zsa zsa",
+      "last": "Caren",
+      "licenseNumber": "6586326265",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Quality Control Specialist",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 5,
+      "stateId": 5,
+      "first": "Glenine",
+      "last": "Dreinan",
+      "licenseNumber": "2454133024",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Mechanical Systems Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 6,
+      "stateId": 6,
+      "first": "Micah",
+      "last": "Durston",
+      "licenseNumber": "2247903754",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Structural Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 7,
+      "stateId": 7,
+      "first": "Tyrus",
+      "last": "Brophy",
+      "licenseNumber": "1248294181",
+      "licenseStatus": true,
+      "licenseType": "Database Administrator I",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 8,
+      "stateId": 8,
+      "first": "Sydelle",
+      "last": "Genever",
+      "licenseNumber": "6383647296",
+      "licenseStatus": true,
+      "licenseType": "Administrative Officer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 9,
+      "stateId": 9,
+      "first": "Lanita",
+      "last": "Loffill",
+      "licenseNumber": "5567513259",
+      "licenseStatus": true,
+      "licenseType": "Analyst Programmer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 10,
+      "stateId": 10,
+      "first": "Doria",
+      "last": "Scolli",
+      "licenseNumber": "0117402362",
+      "licenseStatus": false,
+      "licenseType": "Senior Editor",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 11,
+      "stateId": 11,
+      "first": "Bibby",
+      "last": "Yearne",
+      "licenseNumber": "2404185551",
+      "licenseStatus": true,
+      "licenseType": "Software Consultant",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 12,
+      "stateId": 12,
+      "first": "Sharyl",
+      "last": "Kinglesyd",
+      "licenseNumber": "9586859479",
+      "licenseStatus": true,
+      "licenseType": "Director of Sales",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 13,
+      "stateId": 13,
+      "first": "Elyssa",
+      "last": "Brewse",
+      "licenseNumber": "0033207224",
+      "licenseStatus": true,
+      "licenseType": "Sales Representative",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 14,
+      "stateId": 14,
+      "first": "Felizio",
+      "last": "Couser",
+      "licenseNumber": "6750538665",
+      "licenseStatus": true,
+      "licenseType": "Payment Adjustment Coordinator",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 15,
+      "stateId": 15,
+      "first": "Teddie",
+      "last": "Woolard",
+      "licenseNumber": "4816250255",
+      "licenseStatus": true,
+      "licenseType": "Assistant Manager",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 16,
+      "stateId": 16,
+      "first": "Nikoletta",
+      "last": "Bright",
+      "licenseNumber": "9901333253",
+      "licenseStatus": true,
+      "licenseType": "Marketing Manager",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 17,
+      "stateId": 17,
+      "first": "Andonis",
+      "last": "Bridgestock",
+      "licenseNumber": "5260594126",
+      "licenseStatus": true,
+      "licenseType": "Marketing Manager",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 18,
+      "stateId": 18,
+      "first": "Charleen",
+      "last": "Hyde",
+      "licenseNumber": "4722274436",
+      "licenseStatus": true,
+      "licenseType": "Software Consultant",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 19,
+      "stateId": 19,
+      "first": "Fidole",
+      "last": "Rieger",
+      "licenseNumber": "1476931968",
+      "licenseStatus": true,
+      "licenseType": "Human Resources Assistant III",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 20,
+      "stateId": 20,
+      "first": "Vaclav",
+      "last": "Rizzone",
+      "licenseNumber": "7768463404",
+      "licenseStatus": false,
+      "licenseType": "Civil Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 21,
+      "stateId": 21,
+      "first": "Maxy",
+      "last": "Sherland",
+      "licenseNumber": "3188111703",
+      "licenseStatus": false,
+      "licenseType": "Director of Sales",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 22,
+      "stateId": 22,
+      "first": "Michal",
+      "last": "Kingcott",
+      "licenseNumber": "5437960808",
+      "licenseStatus": false,
+      "licenseType": "GIS Technical Architect",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 23,
+      "stateId": 23,
+      "first": "Betti",
+      "last": "Patillo",
+      "licenseNumber": "9622631045",
+      "licenseStatus": true,
+      "licenseType": "Electrical Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 24,
+      "stateId": 24,
+      "first": "Artie",
+      "last": "Tolworthy",
+      "licenseNumber": "6798821448",
+      "licenseStatus": true,
+      "licenseType": "Design Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 25,
+      "stateId": 25,
+      "first": "Rubetta",
+      "last": "Witherup",
+      "licenseNumber": "3280806216",
+      "licenseStatus": false,
+      "licenseType": "Staff Scientist",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 26,
+      "stateId": 26,
+      "first": "Hyman",
+      "last": "Kalberer",
+      "licenseNumber": "5155420008",
+      "licenseStatus": true,
+      "licenseType": "Accounting Assistant I",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 27,
+      "stateId": 27,
+      "first": "Ware",
+      "last": "McTavish",
+      "licenseNumber": "9420533743",
+      "licenseStatus": false,
+      "licenseType": "Tax Accountant",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 28,
+      "stateId": 28,
+      "first": "Kinny",
+      "last": "Bindley",
+      "licenseNumber": "6857406693",
+      "licenseStatus": true,
+      "licenseType": "Junior Executive",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 29,
+      "stateId": 29,
+      "first": "Kellia",
+      "last": "Klaggeman",
+      "licenseNumber": "0216841526",
+      "licenseStatus": true,
+      "licenseType": "Health Coach IV",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 30,
+      "stateId": 30,
+      "first": "Inglebert",
+      "last": "Crayk",
+      "licenseNumber": "6579874481",
+      "licenseStatus": false,
+      "licenseType": "Electrical Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 31,
+      "stateId": 31,
+      "first": "Tomasine",
+      "last": "Petrov",
+      "licenseNumber": "9942178686",
+      "licenseStatus": false,
+      "licenseType": "Product Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 32,
+      "stateId": 32,
+      "first": "Smith",
+      "last": "Giacovelli",
+      "licenseNumber": "6920352257",
+      "licenseStatus": true,
+      "licenseType": "Statistician III",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 33,
+      "stateId": 33,
+      "first": "Ettore",
+      "last": "Fifoot",
+      "licenseNumber": "2595257013",
+      "licenseStatus": false,
+      "licenseType": "Operator",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 34,
+      "stateId": 34,
+      "first": "Benjamen",
+      "last": "Braddock",
+      "licenseNumber": "0353927910",
+      "licenseStatus": true,
+      "licenseType": "Nuclear Power Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 35,
+      "stateId": 35,
+      "first": "Valdemar",
+      "last": "Stroder",
+      "licenseNumber": "9270697754",
+      "licenseStatus": true,
+      "licenseType": "Accountant I",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 36,
+      "stateId": 36,
+      "first": "Elsbeth",
+      "last": "Spering",
+      "licenseNumber": "1157352804",
+      "licenseStatus": false,
+      "licenseType": "Librarian",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 37,
+      "stateId": 37,
+      "first": "Cathie",
+      "last": "Cupper",
+      "licenseNumber": "2795389258",
+      "licenseStatus": true,
+      "licenseType": "Librarian",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 38,
+      "stateId": 38,
+      "first": "Marilyn",
+      "last": "Griggs",
+      "licenseNumber": "2958084744",
+      "licenseStatus": false,
+      "licenseType": "GIS Technical Architect",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 39,
+      "stateId": 39,
+      "first": "Brendin",
+      "last": "Pooke",
+      "licenseNumber": "0929846834",
+      "licenseStatus": false,
+      "licenseType": "Chemical Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 40,
+      "stateId": 40,
+      "first": "Craig",
+      "last": "Corradino",
+      "licenseNumber": "0491667418",
+      "licenseStatus": true,
+      "licenseType": "Data Coordiator",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 41,
+      "stateId": 41,
+      "first": "Gilli",
+      "last": "Schultes",
+      "licenseNumber": "8103376337",
+      "licenseStatus": false,
+      "licenseType": "Environmental Tech",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 42,
+      "stateId": 42,
+      "first": "Iggy",
+      "last": "McCullouch",
+      "licenseNumber": "8422782782",
+      "licenseStatus": true,
+      "licenseType": "Office Assistant I",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 43,
+      "stateId": 43,
+      "first": "Judon",
+      "last": "Shurrocks",
+      "licenseNumber": "8114255196",
+      "licenseStatus": false,
+      "licenseType": "Assistant Professor",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 44,
+      "stateId": 44,
+      "first": "Geoffrey",
+      "last": "Hauxby",
+      "licenseNumber": "2230016369",
+      "licenseStatus": true,
+      "licenseType": "Software Test Engineer IV",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 45,
+      "stateId": 45,
+      "first": "Babb",
+      "last": "Dobie",
+      "licenseNumber": "7079404606",
+      "licenseStatus": false,
+      "licenseType": "Recruiting Manager",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 46,
+      "stateId": 46,
+      "first": "Caitlin",
+      "last": "Chidgey",
+      "licenseNumber": "7720559894",
+      "licenseStatus": false,
+      "licenseType": "Structural Engineer",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 47,
+      "stateId": 47,
+      "first": "Des",
+      "last": "Roskelly",
+      "licenseNumber": "5854443554",
+      "licenseStatus": false,
+      "licenseType": "Desktop Support Technician",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 48,
+      "stateId": 48,
+      "first": "Kermy",
+      "last": "Llorente",
+      "licenseNumber": "6631140986",
+      "licenseStatus": true,
+      "licenseType": "Web Developer I",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 49,
+      "stateId": 49,
+      "first": "Eachelle",
+      "last": "Capitano",
+      "licenseNumber": "9237055994",
+      "licenseStatus": false,
+      "licenseType": "Research Nurse",
+      "issueDate": null,
+      "expireDate": null
+    },
+    {
+      "id": 50,
+      "stateId": 50,
+      "first": "Jenelle",
+      "last": "Crosby",
+      "licenseNumber": "6287985666",
+      "licenseStatus": false,
+      "licenseType": "Computer Systems Analyst I",
+      "issueDate": null,
+      "expireDate": null
+    }
+  ],
+  "stateCodes": [
+    {
+      "id": 1,
+      "stateId": 1,
+      "abv": "AL"
+    },
+    {
+      "id": 2,
+      "stateId": 2,
+      "abv": "AK"
+    },
+    {
+      "id": 3,
+      "stateId": 3,
+      "abv": "AZ"
+    },
+    {
+      "id": 4,
+      "stateId": 4,
+      "abv": "AR"
+    },
+    {
+      "id": 5,
+      "stateId": 5,
+      "abv": "CA"
+    },
+    {
+      "id": 6,
+      "stateId": 6,
+      "abv": "CO"
+    },
+    {
+      "id": 7,
+      "stateId": 7,
+      "abv": "CT"
+    },
+    {
+      "id": 8,
+      "stateId": 8,
+      "abv": "DE"
+    },
+    {
+      "id": 9,
+      "stateId": 9,
+      "abv": "FL"
+    },
+    {
+      "id": 10,
+      "stateId": 10,
+      "abv": "GA"
+    },
+    {
+      "id": 11,
+      "stateId": 11,
+      "abv": "HI"
+    },
+    {
+      "id": 12,
+      "stateId": 12,
+      "abv": "ID"
+    },
+    {
+      "id": 13,
+      "stateId": 13,
+      "abv": "IL"
+    },
+    {
+      "id": 14,
+      "stateId": 14,
+      "abv": "IN"
+    },
+    {
+      "id": 15,
+      "stateId": 15,
+      "abv": "IA"
+    },
+    {
+      "id": 16,
+      "stateId": 16,
+      "abv": "KS"
+    },
+    {
+      "id": 17,
+      "stateId": 17,
+      "abv": "KY"
+    },
+    {
+      "id": 18,
+      "stateId": 18,
+      "abv": "LA"
+    },
+    {
+      "id": 19,
+      "stateId": 19,
+      "abv": "ME"
+    },
+    {
+      "id": 20,
+      "stateId": 20,
+      "abv": "MD"
+    },
+    {
+      "id": 21,
+      "stateId": 21,
+      "abv": "MA"
+    },
+    {
+      "id": 22,
+      "stateId": 22,
+      "abv": "MI"
+    },
+    {
+      "id": 23,
+      "stateId": 23,
+      "abv": "MN"
+    },
+    {
+      "id": 24,
+      "stateId": 24,
+      "abv": "MS"
+    },
+    {
+      "id": 25,
+      "stateId": 25,
+      "abv": "MO"
+    },
+    {
+      "id": 26,
+      "stateId": 26,
+      "abv": "MT"
+    },
+    {
+      "id": 27,
+      "stateId": 27,
+      "abv": "NE"
+    },
+    {
+      "id": 28,
+      "stateId": 28,
+      "abv": "NV"
+    },
+    {
+      "id": 29,
+      "stateId": 29,
+      "abv": "NH"
+    },
+    {
+      "id": 30,
+      "stateId": 30,
+      "abv": "NJ"
+    },
+    {
+      "id": 31,
+      "stateId": 31,
+      "abv": "NM"
+    },
+    {
+      "id": 32,
+      "stateId": 32,
+      "abv": "NY"
+    },
+    {
+      "id": 33,
+      "stateId": 33,
+      "abv": "NC"
+    },
+    {
+      "id": 34,
+      "stateId": 34,
+      "abv": "ND"
+    },
+    {
+      "id": 35,
+      "stateId": 35,
+      "abv": "OH"
+    },
+    {
+      "id": 36,
+      "stateId": 36,
+      "abv": "OK"
+    },
+    {
+      "id": 37,
+      "stateId": 37,
+      "abv": "OR"
+    },
+    {
+      "id": 38,
+      "stateId": 38,
+      "abv": "PA"
+    },
+    {
+      "id": 39,
+      "stateId": 39,
+      "abv": "RI"
+    },
+    {
+      "id": 40,
+      "stateId": 40,
+      "abv": "SC"
+    },
+    {
+      "id": 41,
+      "stateId": 41,
+      "abv": "SD"
+    },
+    {
+      "id": 42,
+      "stateId": 42,
+      "abv": "TN"
+    },
+    {
+      "id": 43,
+      "stateId": 43,
+      "abv": "TX"
+    },
+    {
+      "id": 44,
+      "stateId": 44,
+      "abv": "UT"
+    },
+    {
+      "id": 45,
+      "stateId": 45,
+      "abv": "VT"
+    },
+    {
+      "id": 46,
+      "stateId": 46,
+      "abv": "VA"
+    },
+    {
+      "id": 47,
+      "stateId": 47,
+      "abv": "WA"
+    },
+    {
+      "id": 48,
+      "stateId": 48,
+      "abv": "WV"
+    },
+    {
+      "id": 49,
+      "stateId": 49,
+      "abv": "WI"
+    },
+    {
+      "id": 50,
+      "stateId": 50,
+      "abv": "WY"
+    }
+  ],
+  "saved": [
+    {
+      "nurseId": 1,
+      "userId": 4,
+      "notes": "",
+      "id": 16
+    },
+    {
+      "nurseId": 2,
+      "userId": 3,
+      "notes": "",
+      "id": 1671
+    },
+    {
+      "nurseId": 3,
+      "userId": 3,
+      "notes": "",
+      "id": 1672
+    },
+    {
+      "nurseId": 4,
+      "userId": 3,
+      "notes": "",
+      "id": 1673
+    },
+    {
+      "nurseId": 5,
+      "userId": 4,
+      "notes": "",
+      "id": 164
+    },
+    {
+      "nurseId": 1,
+      "userId": 5,
+      "notes": "",
+      "id": 1674
+    }
+  ]
+}
