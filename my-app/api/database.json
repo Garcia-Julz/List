@@ -23,6 +23,12 @@
       "email": "Garcia.j.julian@gmail.com",
       "password": "123",
       "id": 4
+    },
+    {
+      "name": "123",
+      "email": "123@123.com",
+      "password": "123",
+      "id": 5
     }
   ],
   "nurses": [
@@ -870,6 +876,12 @@
       "userId": 4,
       "notes": "",
       "id": 164
+    },
+    {
+      "nurseId": 1,
+      "userId": 5,
+      "notes": "",
+      "id": 1674
     }
   ]
 }
