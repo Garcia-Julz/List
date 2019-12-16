@@ -17,17 +17,20 @@ class NurseCard extends Component {
             notes: ""
         }
         ApiManager.post("saved", nurse)
-        // .then(() =>
-        //     this.props.history.push("/mylist"));
+        .then(() =>
+            this.props.history.push("/mylist"));
     }
 
-    delete = id => {
-        console.log("click", this.props.savedId)
-        ApiManager.delete("saved", id)
-        // .then(()=>{
-        //     this.props.savedId()
-        //     console.log(this.delete)
-        // })
+    // delete = id => {
+    //     console.log("click", this.props.savedId)
+    //     ApiManager.delete("saved", id)
+    //     .then(()=>{
+    //         ApiManager.getAllforLoggedInUser(userId, "saved")
+    //         .then(() => {
+    //         this.props.history.push("/mylist");
+    //         })
+    //     })
+    // }
         // savedNurseId = (this.props.savedId)
         // console.log("savedNurseId", savedNurseId)
         // .then(() => {
@@ -38,7 +41,7 @@ class NurseCard extends Component {
         //     })
         //   })
         // })
-    }
+    
 
     // componentDidMount() {
     //     const currentUser = localStorage.getItem("credentials")
@@ -53,8 +56,6 @@ class NurseCard extends Component {
     // }
 
     render() {
-        console.log("Saved Nurse info", this.props)
-        console.log("click", onclick)
         return (
           <div className="card">
               <div className="card-content">
@@ -80,7 +81,7 @@ class NurseCard extends Component {
                     <button 
                     type="button"
                     className="button2"
-                    onClick={()=> this.delete(this.props.savedId)}
+                    onClick={()=> this.props.delete(this.props.savedId)}
                     >
                         <span>Delete</span>
                     </button>

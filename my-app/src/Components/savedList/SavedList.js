@@ -10,18 +10,18 @@ class SavedList extends Component {
         savedNurses: []
     }
 
-    // deleteNurse = SavedId => {
-    //     console.log("clicked", SavedId)
-        // ApiManager.delete(userId, "saved", id)
-        // .then(() => {
-        //     ApiManager.getAll()
-        //   .then(~.post("saved", this.state.savedNurses.id) => {
-        //     this.setState({
-        //         savedNurses: ~
-            // })
-        //   })
-        // })
-    // }
+    delete = id => {
+        console.log("click", this.props.savedId)
+        ApiManager.delete("saved", id)
+        .then(()=>{
+            ApiManager.getAllforLoggedInUser(userId, "saved")
+            .then((savedNurse) => {
+            this.setState({
+                savedNurses: savedNurse
+            })
+        })
+        })
+    }
 
     componentDidMount(){
         // console.log("SAVED LIST: ComponentDidMount");
@@ -45,7 +45,7 @@ class SavedList extends Component {
                 key={nurse.id}
                 nurse={nurse.nurse}
                 savedId={nurse.id}
-                deleteNurse={this.deleteNurse}
+                delete={this.delete}
                 {...this.props}
                 />
             })}

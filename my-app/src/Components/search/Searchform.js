@@ -97,6 +97,7 @@ class SearchForm extends Component {
                 key={nurse.id} 
                 nurse={nurse} 
                 {...this.props}
+                delete={this.delete}
                 />
                 )}
                 </div>
