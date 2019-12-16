@@ -1,34 +1,60 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 
+const userId = Number(localStorage.getItem("credentials"))
+
 class NurseCard extends Component {
 
+    state = {
+        savedNurses: []
+    }
+    
     saveNurse = evt => {
         evt.preventDefault();
-            const nurse = {
-                nurseId: this.props.nurse.id,
-                userId: Number(localStorage.getItem("credentials")),
-                notes: ""
-            }
-            ApiManager.post("saved", nurse)
-                // .then(() =>
-                //     this.props.history.push("/mylist"));
-                //     console.log("hello", nurse)
+        const nurse = {
+            nurseId: this.props.nurse.id,
+            userId: Number(localStorage.getItem("credentials")),
+            notes: ""
+        }
+        ApiManager.post("saved", nurse)
+        // .then(() =>
+        //     this.props.history.push("/mylist"));
     }
 
-    componentDidMount() {
-        const currentUser = localStorage.getItem("credentials")
-        ApiManager.getAll("stateCodes")
-          .then(stateCodes => {
-            this.setState({
-                userId: currentUser.id,
-                stateCodes: stateCodes,
-                loadingStatus: false
-            });
-          });
+    delete = id => {
+        console.log("click", this.props.savedId)
+        ApiManager.delete("saved", id)
+        // .then(()=>{
+        //     this.props.savedId()
+        //     console.log(this.delete)
+        // })
+        // savedNurseId = (this.props.savedId)
+        // console.log("savedNurseId", savedNurseId)
+        // .then(() => {
+        //     ApiManager.getAll()
+        //   .then(~.post("saved", this.state.savedNurses.id) => {
+        //     this.setState({
+        //         savedNurses: ~
+        //     })
+        //   })
+        // })
     }
+
+    // componentDidMount() {
+    //     const currentUser = localStorage.getItem("credentials")
+    //     ApiManager.getAll("stateCodes")
+    //       .then(stateCodes => {
+    //         this.setState({
+    //             userId: currentUser.id,
+    //             stateCodes: stateCodes,
+    //             loadingStatus: false
+    //         });
+    //       });
+    // }
 
     render() {
+        console.log("Saved Nurse info", this.props)
+        console.log("click", onclick)
         return (
           <div className="card">
               <div className="card-content">
@@ -54,7 +80,7 @@ class NurseCard extends Component {
                     <button 
                     type="button"
                     className="button2"
-                    onClick={this.deleteNurse}
+                    onClick={()=> this.delete(this.props.savedId)}
                     >
                         <span>Delete</span>
                     </button>

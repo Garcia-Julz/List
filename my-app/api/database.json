@@ -587,7 +587,7 @@
       "stateId": 50,
       "first": "Jenelle",
       "last": "Crosby",
-      "licenseNumber": "6287985666",
+      "licenseNumber": "50",
       "licenseStatus": false,
       "licenseType": "Computer Systems Analyst I",
       "issueDate": null,
@@ -882,6 +882,24 @@
       "userId": 5,
       "notes": "",
       "id": 1674
+    },
+    {
+      "nurseId": 1,
+      "userId": 2,
+      "notes": "",
+      "id": 1689
+    },
+    {
+      "nurseId": 1,
+      "userId": 2,
+      "notes": "",
+      "id": 1690
+    },
+    {
+      "nurseId": 1,
+      "userId": 2,
+      "notes": "",
+      "id": 1691
     }
   ]
 }
