@@ -75,7 +75,10 @@ class SearchForm extends Component {
                         onChange={this.handleFieldChange}
                     >
                         {this.state.stateCodes.map(states => 
-                        <option key={states.stateId} value={states.stateId}>
+                        <option 
+                        key={states.stateId} 
+                        value={states.stateId}
+                        >
                             {states.abv}
                         </option>
                         )}

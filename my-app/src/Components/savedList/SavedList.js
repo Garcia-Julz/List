@@ -11,7 +11,6 @@ class SavedList extends Component {
     }
 
     delete = id => {
-        console.log("click", this.props.savedId)
         ApiManager.delete("saved", id)
         .then(()=>{
             ApiManager.getAllforLoggedInUser(userId, "saved")
@@ -34,8 +33,9 @@ class SavedList extends Component {
             // console.log(this.state.savedNurses)
         })
     }
-
+    
     render() {
+        console.log("hello", this.state.savedNurses)
         return (
         <>
         <div className="card-container">

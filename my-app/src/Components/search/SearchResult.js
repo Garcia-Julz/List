@@ -21,41 +21,8 @@ class NurseCard extends Component {
             this.props.history.push("/mylist"));
     }
 
-    // delete = id => {
-    //     console.log("click", this.props.savedId)
-    //     ApiManager.delete("saved", id)
-    //     .then(()=>{
-    //         ApiManager.getAllforLoggedInUser(userId, "saved")
-    //         .then(() => {
-    //         this.props.history.push("/mylist");
-    //         })
-    //     })
-    // }
-        // savedNurseId = (this.props.savedId)
-        // console.log("savedNurseId", savedNurseId)
-        // .then(() => {
-        //     ApiManager.getAll()
-        //   .then(~.post("saved", this.state.savedNurses.id) => {
-        //     this.setState({
-        //         savedNurses: ~
-        //     })
-        //   })
-        // })
-    
-
-    // componentDidMount() {
-    //     const currentUser = localStorage.getItem("credentials")
-    //     ApiManager.getAll("stateCodes")
-    //       .then(stateCodes => {
-    //         this.setState({
-    //             userId: currentUser.id,
-    //             stateCodes: stateCodes,
-    //             loadingStatus: false
-    //         });
-    //       });
-    // }
-
     render() {
+        console.log("test", this.props.savedId)
         return (
           <div className="card">
               <div className="card-content">
@@ -84,6 +51,13 @@ class NurseCard extends Component {
                     onClick={()=> this.props.delete(this.props.savedId)}
                     >
                         <span>Delete</span>
+                    </button>
+                    <button 
+                    type="button"
+                    className="button2"
+                    onClick={()=> this.props.history.push(`/mylist/details/${this.props.savedId}`)}
+                    >
+                        <span>Details</span>
                     </button>
                 </section>
               </div>
