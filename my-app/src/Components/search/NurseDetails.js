@@ -1,21 +1,55 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 
-class NurseCardDetails extends Component {
+class NurseCardNotes extends Component {
 
     state = {
         first: "",
         last: "",
+        licenseStatus: "",
+        licenseType: "",
+        notes: "",
+        id: "",
+        userId: "",
+        nurseId: "",
         loadingStatus: false,
+    }
+
+    updateNotes = evt => {
+        evt.preventDefault()
+        this.setState({ loadingStatus: true });
+        const editedNotes = {
+            id: this.state.id,
+            nurseId: this.state.nurseId,
+            userId: this.state.userId,
+            notes: this.state.notes,
+        };
+        ApiManager.update("saved", editedNotes)
+        this.props.history.push("/mylist");
+    }
+
+    handleFieldChange = evt => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
     }
 
     componentDidMount(){
         //getAll from ApiManager and hang on to that data; put it in state
-        ApiManager.get("saved", Number(this.props.match.params.savedNurseId))
+        ApiManager.getNurseDetails("saved", this.props.match.params.savedNurseId)
         .then((savedNurse) => {
+            console.log("I am nested", savedNurse)
             this.setState({
-                first: savedNurse.first,
-                last: savedNurse.last,
+                first: savedNurse.nurse.first,
+                last: savedNurse.nurse.last,
+                licenseStatus: savedNurse.nurse.licenseStatus,
+                licenseType: savedNurse.nurse.licenseType,
+                issueDate: savedNurse.nurse.issueDate,
+                expireDate: savedNurse.nurse.expireDate,
+                notes: savedNurse.notes,
+                nurseId: savedNurse.nurseId,
+                userId: savedNurse.userId,
+                id: savedNurse.id,
                 loadingStatus: false,
             })
             console.log(savedNurse)
@@ -23,6 +57,7 @@ class NurseCardDetails extends Component {
     }
 
     render() {
+        // console.log(this.props.match.params.savedNurseId)
         return (
         <div className="card" id="card-container">
             <div className="card-content" id="card-content">
@@ -31,8 +66,28 @@ class NurseCardDetails extends Component {
             </picture> */}
                 <p>First: {this.state.first}</p>
                 <p>Last: {this.state.last}</p>
-                <button type="button" className="button" disabled={this.state.loadingStatus}
-                onClick={this.handleEdit}><span>Edit</span></button>
+                <p>Status: {this.state.licenseStatus}</p>
+                <p>Type: {this.state.licenseType}</p>
+                <p>Issued: {this.state.issueDate}</p>
+                <p>Expires: {this.state.expireDate}</p>
+                {/* <p>Notes: {this.state.notes}</p> */}
+                <label htmlFor="animalName">Notes:</label>
+
+              <input
+                type="text"
+                required
+                className="form-control"
+                onChange={this.handleFieldChange}
+                id="notes"
+                value={this.state.notes}
+              />
+                <button 
+                type="button" 
+                disabled={this.state.loadingStatus}
+                className="button" 
+                onClick={this.updateNotes}>
+                    <span>Save</span>
+                </button>
             </div>
         </div>
         );
@@ -40,4 +95,4 @@ class NurseCardDetails extends Component {
 
 }
 
-export default NurseCardDetails;
+export default NurseCardNotes;

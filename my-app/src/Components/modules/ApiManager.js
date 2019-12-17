@@ -9,6 +9,9 @@ export default {
     get(tableName, id) {
         return fetch(`${remoteURL}/${tableName}/${id}`).then(result => result.json())
     },
+    getNurseDetails(tableName, id) {
+        return fetch(`${remoteURL}/${tableName}/${id}/?_expand=nurse`).then(result => result.json())
+    },
     // This fetch call gets all objects from tableName.
     getAll(tableName) {
         return fetch(`${remoteURL}/${tableName}`).then(result => result.json())

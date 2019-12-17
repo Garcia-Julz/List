@@ -29,6 +29,12 @@
       "email": "123@123.com",
       "password": "123",
       "id": 5
+    },
+    {
+      "name": "Usif",
+      "email": "u@rocks.com",
+      "password": "123",
+      "id": 6
     }
   ],
   "nurses": [
@@ -40,8 +46,8 @@
       "licenseNumber": "1",
       "licenseStatus": "ACTIVE",
       "licenseType": "VP Product Management",
-      "issueDate": null,
-      "expireDate": null
+      "issueDate": "01/13/1995",
+      "expireDate": "01/13/2021"
     },
     {
       "id": 51,
@@ -51,8 +57,8 @@
       "licenseNumber": "2",
       "licenseStatus": "ACTIVE",
       "licenseType": "VP Product Management",
-      "issueDate": null,
-      "expireDate": null
+      "issueDate": "01/13/1995",
+      "expireDate": "06/13/2022"
     },
     {
       "id": 2,
@@ -62,8 +68,8 @@
       "licenseNumber": "2",
       "licenseStatus": "ACTIVE",
       "licenseType": "Administrative Officer",
-      "issueDate": null,
-      "expireDate": null
+      "issueDate": "01/04/1995",
+      "expireDate": "05/27/2024"
     },
     {
       "id": 3,
@@ -590,8 +596,8 @@
       "licenseNumber": "50",
       "licenseStatus": false,
       "licenseType": "Computer Systems Analyst I",
-      "issueDate": null,
-      "expireDate": null
+      "issueDate": "09/19/1999",
+      "expireDate": "12/30/2019"
     }
   ],
   "stateCodes": [
@@ -884,10 +890,32 @@
       "id": 1674
     },
     {
-      "nurseId": 2,
-      "userId": 2,
-      "notes": "",
+      "notes": "12334",
       "id": 1676
+    },
+    {
+      "id": 1677,
+      "nurseId": 1,
+      "userId": 2,
+      "notes": "1234567ee"
+    },
+    {
+      "id": 1678,
+      "nurseId": 50,
+      "userId": 2,
+      "notes": "21212456"
+    },
+    {
+      "id": 1679,
+      "nurseId": 2,
+      "userId": 6,
+      "notes": "12345678"
+    },
+    {
+      "id": 1681,
+      "nurseId": 1,
+      "userId": 2,
+      "notes": "0987654"
     }
   ]
 }

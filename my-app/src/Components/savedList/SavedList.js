@@ -30,7 +30,7 @@ class SavedList extends Component {
             this.setState({
                 savedNurses: savedNurse
             })
-            // console.log(this.state.savedNurses)
+            // console.log("userId", userId)
         })
     }
     
@@ -46,6 +46,7 @@ class SavedList extends Component {
                 nurse={nurse.nurse}
                 savedId={nurse.id}
                 delete={this.delete}
+                nurseCard={nurse}
                 {...this.props}
                 />
             })}

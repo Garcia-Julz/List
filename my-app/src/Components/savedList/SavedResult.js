@@ -8,7 +8,7 @@ class NurseCard extends Component {
     state = {
         savedNurses: []
     }
-    
+
     saveNurse = evt => {
         evt.preventDefault();
         const nurse = {
@@ -22,7 +22,6 @@ class NurseCard extends Component {
     }
 
     render() {
-        console.log("test", )
         return (
           <div className="card">
               <div className="card-content">
@@ -37,15 +36,8 @@ class NurseCard extends Component {
                 <p>License Type: {this.props.nurse.licenseType}</p>
                 <p>Issued: {this.props.nurse.issueDate}</p>
                 <p>Expires: {this.props.nurse.expireDate}</p>
-                {/* <p>Notes: {this.props.nurseCard.notes}</p> */}
+                <p>Notes: {this.props.nurseCard.notes}</p>
                 <section className="buttonSection">
-                    <button 
-                    type="button"
-                    className="button2"
-                    onClick={this.saveNurse}
-                    >
-                        <span>Save</span>
-                    </button>
                     <button 
                     type="button"
                     className="button2"

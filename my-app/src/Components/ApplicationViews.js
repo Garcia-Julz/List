@@ -16,7 +16,7 @@ import SavedList from "./savedList/SavedList";
 // import TasksList from "./tasks/TasksList"
 // import FriendsList from "./friends/FriendsList";
 // // *****************  EDIT  ***********************
-import NurseCardDetails from "./search/NurseDetails";
+import NurseCardNotes from "./search/NurseDetails";
 // import EventEditForm from "./events/EventEditForm";
 // import MessageEditForm from "./messages/MessageEditForm";
 // import TaskEditForm from "./tasks/TaskEditForm";
@@ -105,7 +105,7 @@ export default class ApplicationViews extends Component {
         /> */}
 
         <Route path="/mylist/details/:savedNurseId(\d+)" render={props => {
-          return <NurseCardDetails savedNurseId={parseInt(props.match.params.savedNurseId)}
+          return <NurseCardNotes savedNurseId={parseInt(props.match.params.savedNurseId)}
           {...props} />
         }}
         />
