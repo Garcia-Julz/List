@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 
-const userId = Number(localStorage.getItem("credentials"))
-
 class NurseCard extends Component {
 
     state = {
@@ -45,7 +43,7 @@ class NurseCard extends Component {
                     onClick={this.saveNurse}
                     >
                         <span>Save</span>
-                    </button>
+                    {/* </button>
                     <button 
                     type="button"
                     className="button2"
@@ -58,7 +56,7 @@ class NurseCard extends Component {
                     className="button2"
                     onClick={()=> this.props.history.push(`/mylist/details/${this.props.savedId}`)}
                     >
-                        <span>Add Notes</span>
+                        <span>Add Notes</span> */}
                     </button>
                 </section>
               </div>

@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import ApiManager from '../modules/ApiManager';
+// import ApiManager from '../modules/ApiManager';
 
-const userId = Number(localStorage.getItem("credentials"))
-
-class NurseCard extends Component {
+class SavedCard extends Component {
 
     state = {
         savedNurses: []
     }
 
-    saveNurse = evt => {
-        evt.preventDefault();
-        const nurse = {
-            nurseId: this.props.nurse.id,
-            userId: Number(localStorage.getItem("credentials")),
-            notes: ""
-        }
-        ApiManager.post("saved", nurse)
-        .then(() =>
-            this.props.history.push("/mylist"));
-    }
+    // saveNurse = evt => {
+    //     evt.preventDefault();
+    //     const nurse = {
+    //         nurseId: this.props.nurse.id,
+    //         userId: Number(localStorage.getItem("credentials")),
+    //         notes: ""
+    //     }
+    //     ApiManager.post("saved", nurse)
+    //     .then(() =>
+    //         this.props.history.push("/mylist"));
+    // }
 
     render() {
         return (
@@ -59,4 +57,4 @@ class NurseCard extends Component {
     }
 }
 
-export default NurseCard;
+export default SavedCard;

@@ -29,7 +29,9 @@ export default class ApplicationViews extends Component {
       <React.Fragment>
         {/* Home and Authentication */}
         <Route exact path="/" render={(props) => {
-          return <Home {...props} />
+          return <Home 
+          user= {this.props.user}
+          {...props} />
         }}
         />
         <Route

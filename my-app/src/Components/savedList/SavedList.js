@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
-import NurseCard from '../search/SearchResult';
+import SavedCard from '../savedList/SavedResult';
 
 const userId = localStorage.getItem("credentials")
 
@@ -25,7 +25,8 @@ class SavedList extends Component {
     componentDidMount(){
         // console.log("SAVED LIST: ComponentDidMount");
         //getAll from ApiManager and hang on to that data; put it in state
-        ApiManager.getAllforLoggedInUser(userId, "saved")
+        
+        ApiManager.getAllforLoggedInUser(localStorage.getItem("credentials"), "saved")
         .then((savedNurse) => {
             this.setState({
                 savedNurses: savedNurse
@@ -41,7 +42,7 @@ class SavedList extends Component {
         <div className="card-container">
             {this.state.savedNurses.map(nurse => {
                 // console.log("hello", nurse)
-            return <NurseCard
+            return <SavedCard
                 key={nurse.id}
                 nurse={nurse.nurse}
                 savedId={nurse.id}

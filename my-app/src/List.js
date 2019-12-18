@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import NavBar from "./Components/nav/NavBar";
 import ApplicationViews from "./Components/ApplicationViews";
 import "./List.css";
-import ApiManager from "./Components/modules/ApiManager";
 
 class List extends Component {
   // user doesn't exist by default
   state = {
     user: false,
-    userId: (localStorage.getItem("credentials").id)
+    userId: 0
   }
 
   // isAuthenticated checks if credentials are in local storage
