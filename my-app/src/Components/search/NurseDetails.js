@@ -17,15 +17,17 @@ class NurseCardNotes extends Component {
 
     updateNotes = evt => {
         evt.preventDefault()
+        const userId = localStorage.getItem("credentials")
         this.setState({ loadingStatus: true });
         const editedNotes = {
             id: this.state.id,
             nurseId: this.state.nurseId,
-            userId: this.state.userId,
+            userId: Number(userId),
             notes: this.state.notes,
         };
         ApiManager.update("saved", editedNotes)
-        this.props.history.push("/mylist");
+        .then(() => 
+            this.props.history.push("/mylist"))
     }
 
     handleFieldChange = evt => {

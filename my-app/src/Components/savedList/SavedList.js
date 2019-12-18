@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 import SavedCard from '../savedList/SavedResult';
 
-const userId = localStorage.getItem("credentials")
 
 class SavedList extends Component {
-
+    
     state = {
         savedNurses: []
     }
-
+    
     delete = id => {
         ApiManager.delete("saved", id)
         .then(()=>{
+            const userId = localStorage.getItem("credentials")
             ApiManager.getAllforLoggedInUser(userId, "saved")
             .then((savedNurse) => {
             this.setState({

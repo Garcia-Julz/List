@@ -4,6 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 
 class NavBar extends Component {
+
+    handleLogout = () => {
+        this.props.clearUser();
+        this.props.history.push('/');
+    }
+    
     render() {
         return (
             <nav className="navbar bg-dark text-white flex-md-nowrap p-0 shadow">
@@ -20,9 +26,9 @@ class NavBar extends Component {
                 </ul>
                 <span className="navbar-text">
                     <ul className="nav nav-pills nav-fill">
+                        <li><span className="nav-link" onClick={this.handleLogout}>Logout</span></li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/register">Register</Link>
-                        </li>
+                            <Link className="nav-link" to="/register">Register</Link></li>
                     </ul>
                 </span>
             </nav>

@@ -27,7 +27,7 @@ class SearchForm extends Component {
         ApiManager.getAll("stateCodes")
           .then(stateCodes => {
             this.setState({
-                userId: currentUser.id,
+                userId: Number(currentUser),
                 stateCodes: stateCodes,
                 loadingStatus: false
             });

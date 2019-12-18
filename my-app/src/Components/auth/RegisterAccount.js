@@ -44,8 +44,8 @@ class Registration extends Component {
                         .then(results => {
                             localStorage.setItem("credentials", results.id)
                         });
+                        this.props.history.push("/search")
                 }
-                    this.props.history.push("/events")
             })
     }
 
