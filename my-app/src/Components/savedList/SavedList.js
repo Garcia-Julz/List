@@ -12,7 +12,8 @@ class SavedList extends Component {
     delete = id => {
         ApiManager.delete("saved", id)
         .then(()=>{
-            const userId = localStorage.getItem("credentials")
+            const userId = JSON.parse(localStorage.getItem("credentials"))
+            console.log("userId", userId)
             ApiManager.getAllforLoggedInUser(userId, "saved")
             .then((savedNurse) => {
             this.setState({
@@ -25,8 +26,9 @@ class SavedList extends Component {
     componentDidMount(){
         // console.log("SAVED LIST: ComponentDidMount");
         //getAll from ApiManager and hang on to that data; put it in state
-        
-        ApiManager.getAllforLoggedInUser(localStorage.getItem("credentials"), "saved")
+        const currentUser = JSON.parse(localStorage.getItem("credentials"))
+        console.log(currentUser.id)
+        ApiManager.getAllforLoggedInUser(currentUser.id, "saved")
         .then((savedNurse) => {
             this.setState({
                 savedNurses: savedNurse
@@ -36,7 +38,6 @@ class SavedList extends Component {
     }
     
     render() {
-        console.log("hello", this.state.savedNurses)
         return (
         <>
         <div className="card-container">

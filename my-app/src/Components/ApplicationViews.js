@@ -31,7 +31,8 @@ export default class ApplicationViews extends Component {
         <Route exact path="/" render={(props) => {
           return <Home 
           user= {this.props.user}
-          {...props} />
+          {...props}
+          {...this.props} />
         }}
         />
         <Route
@@ -43,7 +44,9 @@ export default class ApplicationViews extends Component {
           }}
         />
         <Route exact path="/register" render={props => {
-          return <Registration {...this.props}{...props} />
+          return <Registration 
+          {...this.props}
+          {...props} />
         }}
         />
         {/* LIST */}
@@ -78,7 +81,8 @@ export default class ApplicationViews extends Component {
         /> */}
         <Route exact path="/search" render={props => {
           return <SearchForm 
-          {...props} />
+          {...props}
+          {...this.props} />
         }}
         />
         {/* <Route path="/searchresults" render={props => {
@@ -108,7 +112,8 @@ export default class ApplicationViews extends Component {
 
         <Route path="/mylist/details/:savedNurseId(\d+)" render={props => {
           return <NurseCardNotes savedNurseId={parseInt(props.match.params.savedNurseId)}
-          {...props} />
+          {...props}
+          {...this.props} />
         }}
         />
 

@@ -22,7 +22,7 @@ class Login extends Component {
     ApiManager.checkUser(this.state.email, this.state.password)
     .then(results=>{
         if(results.length>0) {
-            this.props.setUser(results)
+            this.props.setUser(results[0])
             this.props.history.push("/");
         } else {
             alert("Incorrect username, email, or password")

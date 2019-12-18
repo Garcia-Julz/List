@@ -16,13 +16,14 @@ class NurseCardNotes extends Component {
     }
 
     updateNotes = evt => {
+        const currentUser = JSON.parse(localStorage.getItem("credentials"))
         evt.preventDefault()
-        const userId = localStorage.getItem("credentials")
+        // const userId = localStorage.getItem("credentials")
         this.setState({ loadingStatus: true });
         const editedNotes = {
             id: this.state.id,
             nurseId: this.state.nurseId,
-            userId: Number(userId),
+            userId: currentUser.id,
             notes: this.state.notes,
         };
         ApiManager.update("saved", editedNotes)

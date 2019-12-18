@@ -7,7 +7,7 @@ class List extends Component {
   // user doesn't exist by default
   state = {
     user: false,
-    userId: 0
+    userId: ""
   }
 
   // isAuthenticated checks if credentials are in local storage
@@ -15,12 +15,16 @@ class List extends Component {
   isAuthenticated = () => localStorage.getItem("credentials") !== null
 
   setUser = (results) => {
-    // console.log("auth", results[0].id)
-    localStorage.setItem("credentials", results[0].id)
+    console.log("auth-results", results)
+    localStorage.setItem(
+      "credentials", JSON.stringify(results))
     this.setState({
       user: this.isAuthenticated()
     });
+    console.log(results)
   }
+  
+  getUser = JSON.parse(localStorage.getItem("credentials"))
 
   clearUser = () =>  {
     localStorage.removeItem("credentials")
@@ -36,10 +40,13 @@ class List extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar />
+        <NavBar 
+        user={this.state.user}
+        clearUser={this.clearUser}/>
         <ApplicationViews user={this.state.user}
                           setUser={this.setUser} 
-                          handleLogin={this.handleLogin}/>
+                          handleLogin={this.handleLogin}
+                          getUser={this.getUser}/>
       </React.Fragment>
     );
   }

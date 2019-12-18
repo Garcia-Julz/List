@@ -3,24 +3,27 @@ import ApiManager from '../modules/ApiManager';
 
 class NurseCard extends Component {
 
+
     state = {
         savedNurses: []
     }
     
     saveNurse = evt => {
+        const currentUser = JSON.parse(localStorage.getItem("credentials"))
         evt.preventDefault();
         const nurse = {
             nurseId: this.props.nurse.id,
-            userId: Number(localStorage.getItem("credentials")),
+            userId: currentUser.id,
             notes: ""
         }
         ApiManager.post("saved", nurse)
         .then(() =>
-            this.props.history.push("/mylist"));
+        this.props.history.push("/mylist"));
+        console.log("nurse", nurse)
     }
 
     render() {
-        console.log("test", )
+        console.log("props",this.props)
         return (
           <div className="card">
               <div className="card-content">
