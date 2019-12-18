@@ -13,8 +13,8 @@ class SavedList extends Component {
         ApiManager.delete("saved", id)
         .then(()=>{
             const userId = JSON.parse(localStorage.getItem("credentials"))
-            console.log("userId", userId)
-            ApiManager.getAllforLoggedInUser(userId, "saved")
+            console.log("userId", userId.id)
+            ApiManager.getAllforLoggedInUser(userId.id, "saved")
             .then((savedNurse) => {
             this.setState({
                 savedNurses: savedNurse
