@@ -38,8 +38,9 @@ class SavedList extends Component {
     }
     
     render() {
-        return (
-        <>
+        if (this.state.savedNurses.length !== 0) {
+            return (
+                <> 
         <div className="card-container">
             {this.state.savedNurses.map(nurse => {
                 // console.log("hello", nurse)
@@ -54,7 +55,12 @@ class SavedList extends Component {
             })}
         </div>
         </>
-        )
+            )
+        } else {
+            return (
+                <h1>Hello World</h1>
+            )
+        }
     }
 }
 
