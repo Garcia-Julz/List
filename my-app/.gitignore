@@ -1,6 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/src/Components/config/FirebaseFiles.js
+/Components/config/FirebaseFiles.js
 
 # dependencies
 /node_modules
