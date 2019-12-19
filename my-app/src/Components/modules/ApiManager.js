@@ -9,6 +9,9 @@ export default {
     get(tableName, id) {
         return fetch(`${remoteURL}/${tableName}/${id}`).then(result => result.json())
     },
+    getNurseDetails(tableName, id) {
+        return fetch(`${remoteURL}/${tableName}/${id}/?_expand=nurse`).then(result => result.json())
+    },
     // This fetch call gets all objects from tableName.
     getAll(tableName) {
         return fetch(`${remoteURL}/${tableName}`).then(result => result.json())
@@ -27,8 +30,17 @@ export default {
         return fetch(`${remoteURL}/${tableName}/?_expand=nurse`).then(result => result.json())
     },
 
-    delete(tableName, id) {
-        // This fetch call grabs the id of a single object and deletes it from tableName. 
+    deleteNurse(tableName, savedId, userId) {
+        // This fetch call grabs the id of a single object and deletes it from tableName.
+        // http://localhost:5002/user/4/saved/?nurseId=5
+        return fetch(`${remoteURL}/user/${userId}/${tableName}/$nurseId=${savedId}`, {
+            method: "DELETE"
+        })
+        .then(result => result.json())
+    },
+    // http://localhost:5002/user/5/saved/?nurseId=17
+    delete(tableName, id,) {
+        // This fetch call grabs the id of a single object and deletes it from tableName.
         return fetch(`${remoteURL}/${tableName}/${id}`, {
             method: "DELETE"
         })

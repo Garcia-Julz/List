@@ -16,7 +16,7 @@ import SavedList from "./savedList/SavedList";
 // import TasksList from "./tasks/TasksList"
 // import FriendsList from "./friends/FriendsList";
 // // *****************  EDIT  ***********************
-// import ArticlesEditForm from "./articles/ArticlesEditForm";
+import NurseCardNotes from "./search/NurseDetails";
 // import EventEditForm from "./events/EventEditForm";
 // import MessageEditForm from "./messages/MessageEditForm";
 // import TaskEditForm from "./tasks/TaskEditForm";
@@ -29,7 +29,10 @@ export default class ApplicationViews extends Component {
       <React.Fragment>
         {/* Home and Authentication */}
         <Route exact path="/" render={(props) => {
-          return <Home {...props} />
+          return <Home 
+          user= {this.props.user}
+          {...props}
+          {...this.props} />
         }}
         />
         <Route
@@ -41,22 +44,11 @@ export default class ApplicationViews extends Component {
           }}
         />
         <Route exact path="/register" render={props => {
-          return <Registration {...this.props}{...props} />
+          return <Registration 
+          {...this.props}
+          {...props} />
         }}
         />
-        {/* FRIENDS */}
-        {/* <Route
-          path="/friends" render={props => {
-            if (this.props.user) {
-              return <FriendsList
-                {...props}
-                {...this.props}
-              />
-            } else {
-              return <Redirect to="login" />
-            }
-          }}
-        /> */}
         {/* LIST */}
         <Route
           exact path="/mylist" render={props => {
@@ -88,7 +80,9 @@ export default class ApplicationViews extends Component {
           }}
         /> */}
         <Route exact path="/search" render={props => {
-          return <SearchForm {...props} />
+          return <SearchForm 
+          {...props}
+          {...this.props} />
         }}
         />
         {/* <Route path="/searchresults" render={props => {
@@ -108,21 +102,22 @@ export default class ApplicationViews extends Component {
             // Remove null and return the component which will show the user's tasks
           }}
         /> */}
-        {/* ARTICLES */}
+        {/* DETAILS */}
         {/* <Route 
           exact path="/articles" render={props => {
             return <ArticlesList 
             {...props} />
         }}
-        />
+        /> */}
 
-        <Route path="/articles/new" render={props => {
-          return <ArticlesForm 
-          {...props} />
+        <Route path="/mylist/details/:savedNurseId(\d+)" render={props => {
+          return <NurseCardNotes savedNurseId={parseInt(props.match.params.savedNurseId)}
+          {...props}
+          {...this.props} />
         }}
         />
 
-        <Route
+        {/* <Route
           path="/articles/:articleId(\d+)/edit" render={props => {
             return <ArticlesEditForm 
             {...props} />

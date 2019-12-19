@@ -3,36 +3,27 @@ import ApiManager from '../modules/ApiManager';
 
 class NurseCard extends Component {
 
-    saveNurse = evt => {
-        evt.preventDefault();
-            const nurse = {
-                nurseId: this.props.nurse.id,
-                userId: Number(localStorage.getItem("credentials")),
-                notes: ""
-            }
-            ApiManager.post("saved", nurse)
-                // .then(() =>
-                //     this.props.history.push("/mylist"));
-                //     console.log("hello", nurse)
+
+    state = {
+        savedNurses: []
     }
-
-    // deleteNurse = id => {
-    //     delete this.state.savedNurses[id];
-    // }
-
-    componentDidMount() {
-        const currentUser = localStorage.getItem("credentials")
-        ApiManager.getAll("stateCodes")
-          .then(stateCodes => {
-            this.setState({
-                userId: currentUser.id,
-                stateCodes: stateCodes,
-                loadingStatus: false
-            });
-          });
+    
+    saveNurse = evt => {
+        const currentUser = JSON.parse(localStorage.getItem("credentials"))
+        evt.preventDefault();
+        const nurse = {
+            nurseId: this.props.nurse.id,
+            userId: currentUser.id,
+            notes: ""
+        }
+        ApiManager.post("saved", nurse)
+        .then(() =>
+        this.props.history.push("/mylist"));
+        console.log("nurse", nurse)
     }
 
     render() {
+        console.log("props",this.props)
         return (
           <div className="card">
               <div className="card-content">
@@ -47,6 +38,7 @@ class NurseCard extends Component {
                 <p>License Type: {this.props.nurse.licenseType}</p>
                 <p>Issued: {this.props.nurse.issueDate}</p>
                 <p>Expires: {this.props.nurse.expireDate}</p>
+                {/* <p>Notes: {this.props.nurseCard.notes}</p> */}
                 <section className="buttonSection">
                     <button 
                     type="button"
@@ -55,14 +47,28 @@ class NurseCard extends Component {
                     >
                         <span>Save</span>
                     </button>
+                    {/* </button>
                     <button 
+                    type="button"
+                    className="button2"
+                    onClick={()=> this.props.delete(this.props.savedId)}
+                    >
+                        <span>Delete</span>
+                    </button>
+                    <button 
+                    type="button"
+                    className="button2"
+                    onClick={()=> this.props.history.push(`/mylist/details/${this.props.savedId}`)}
+                    >
+                        <span>Add Notes</span> */}
+                    {/* <button 
                     type="button"
                     className="button2"
                     onClick= {() => 
                         this.props.deleteNurse(this.props.nurse.id)}
                     >
                         <span>Delete</span>
-                    </button>
+                    </button> */}
                     {/* <button 
                     type="button"
                     className="button2"

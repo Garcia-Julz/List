@@ -41,16 +41,17 @@ class Registration extends Component {
 
                     // Create the user and redirect user to news
                     ApiManager.createNewUser(user)
-                        .then(results => {
-                            localStorage.setItem("credentials", results.id)
-                        });
+                        .then(results=>{
+                            this.props.setUser(results)
+                        })
+                        .then(() =>{
+                            this.props.history.push("/search")
+                        })
                 }
-                    this.props.history.push("/search")
             })
     }
-
-
-    render() {
+            
+            render() {
         return (
             <>
                 <form>

@@ -27,7 +27,7 @@ class SearchForm extends Component {
         ApiManager.getAll("stateCodes")
           .then(stateCodes => {
             this.setState({
-                userId: currentUser.id,
+                userId: Number(currentUser),
                 stateCodes: stateCodes,
                 loadingStatus: false
             });
@@ -36,22 +36,24 @@ class SearchForm extends Component {
 
     searchNurse = evt => {
         evt.preventDefault()
-        this.setState({ loadingStatus: false });
-        const nurseSearchDetails = {
+        if (this.state.stateId !== "") {
+            this.setState({ loadingStatus: false });
+            const nurseSearchDetails = {
             license: this.state.licenseNumber,
-            stateId: this.state.stateId,
-            // nurseStateId: 
+            stateId: this.state.stateId
         };
-        // console.log("EVT", nurseSearchDetails)
-    
+        
         ApiManager.getNurse("nurses", nurseSearchDetails.stateId, nurseSearchDetails.license)
         .then((showNurse) => this.setState ({
             nurses: showNurse
         })
         //   .then(() => this.props.history.push("/searchresult"))
         )}
-
-    render(){
+        else {
+            window.alert("Please select state!")
+        }}
+        
+        render(){
         return (
             <>
             <form>
@@ -74,8 +76,12 @@ class SearchForm extends Component {
                         value={this.state.stateId}
                         onChange={this.handleFieldChange}
                     >
+                        <option value="">Select a state</option>
                         {this.state.stateCodes.map(states => 
-                        <option key={states.stateId} value={states.stateId}>
+                        <option 
+                        key={states.stateId} 
+                        value={states.stateId}
+                        >
                             {states.abv}
                         </option>
                         )}
@@ -97,6 +103,7 @@ class SearchForm extends Component {
                 key={nurse.id} 
                 nurse={nurse} 
                 {...this.props}
+                delete={this.delete}
                 />
                 )}
                 </div>
