@@ -3,12 +3,13 @@ import ApiManager from '../modules/ApiManager';
 
 class NurseCard extends Component {
 
-
+    // Set saves Nurses to an empty array and will populate only 1 result in state
     state = {
         savedNurses: []
     }
     
     saveNurse = evt => {
+        // this funstion is to save a nurse from your result
         const currentUser = JSON.parse(localStorage.getItem("credentials"))
         evt.preventDefault();
         const nurse = {
@@ -16,10 +17,17 @@ class NurseCard extends Component {
             userId: currentUser.id,
             notes: ""
         }
+        // Once you save a card, it is assigned a nurseId, (your) UserId, and an 
+        // empty string of notes.
+
+        // This posts a nurse that the user saves into the saved table using the
+        // post method below. While nurse contains the values that it should populate in
+        // saved table.
         ApiManager.post("saved", nurse)
         .then(() =>
+        // after the post it redirects the user to /mylist
         this.props.history.push("/mylist"));
-        console.log("nurse", nurse)
+        // console.log("nurse", nurse)
     }
 
     render() {

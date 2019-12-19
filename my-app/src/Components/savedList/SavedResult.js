@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import ApiManager from '../modules/ApiManager';
 
 class SavedCard extends Component {
-
+    // useless
     state = {
         savedNurses: []
     }
@@ -18,6 +18,13 @@ class SavedCard extends Component {
     //     .then(() =>
     //         this.props.history.push("/mylist"));
     // }
+
+
+
+    // SavedCard is the following below. This is different from the card you get from results
+    // this contains 2 different buttons that has the delete function as well as Adding notes.
+    // i used the SavedList to pass the delete property and I used the nurseDetails to pass
+    // the edit notes function.
 
     render() {
         return (

@@ -20,16 +20,15 @@ class Login extends Component {
     handleLogin = e => {
     e.preventDefault()
     ApiManager.checkUser(this.state.email, this.state.password)
-    .then(results=>{
-        if(results.length>0) {
-            this.props.setUser(results[0])
-            this.props.history.push("/");
-        } else {
-            alert("Incorrect username, email, or password")
-        } 
-    })
-}
-
+        .then(results=>{
+            if(results.length>0) {
+                this.props.setUser(results[0])
+                this.props.history.push("/");
+            } else {
+                alert("Incorrect username, email, or password")
+            } 
+        })
+    }
 
     render() {
         return (

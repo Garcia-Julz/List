@@ -3,6 +3,7 @@ import ApiManager from '../modules/ApiManager';
 
 class NurseCardNotes extends Component {
 
+    // I set state to contain the following information to be displayed when a card is selected
     state = {
         first: "",
         last: "",
@@ -15,22 +16,30 @@ class NurseCardNotes extends Component {
         loadingStatus: false,
     }
 
+    // updateNotes gives the function to update your notes
     updateNotes = evt => {
+        // I define my current user as an object 
         const currentUser = JSON.parse(localStorage.getItem("credentials"))
         evt.preventDefault()
         // const userId = localStorage.getItem("credentials")
         this.setState({ loadingStatus: true });
         const editedNotes = {
+            // the following informtaion that will be passed on to the saved table once when
+            // you make and post your edit. 
             id: this.state.id,
             nurseId: this.state.nurseId,
             userId: currentUser.id,
             notes: this.state.notes,
         };
+        // this updates your existing info in your DB with edited notes. 
         ApiManager.update("saved", editedNotes)
         .then(() => 
+            // then it reditects you to your saved list after
             this.props.history.push("/mylist"))
     }
 
+    // hanlde field change handes the changes being made to state by the input field in
+    // the edited notes field to be specific.
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
@@ -41,7 +50,10 @@ class NurseCardNotes extends Component {
         //getAll from ApiManager and hang on to that data; put it in state
         ApiManager.getNurseDetails("saved", this.props.match.params.savedNurseId)
         .then((savedNurse) => {
-            console.log("I am nested", savedNurse)
+            // console.log("I am nested", savedNurse)
+            // this fetches the nurse from your saved table.
+            // It contains an object within the object and that object inside your 
+            // saved table has the nurse info id to be fetched for when you see the nurse details
             this.setState({
                 first: savedNurse.nurse.first,
                 last: savedNurse.nurse.last,
