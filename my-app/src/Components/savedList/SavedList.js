@@ -23,6 +23,23 @@ class SavedList extends Component {
         })
     }
 
+    // deleteNurse = id => {
+    //     // handles deleting a single event from events array and renders updated array to the DOM
+    //     ApiManager.delete("saved", id)
+    //         .then(() => {
+    //             ApiManager.getAllforLoggedInUser(userId, "saved")
+    //                 .then((updateSavedList) => {
+    //                     this.setState({
+    //                         savedNurses: updateSavedList
+    //                     })
+    //                 })
+    //         })
+    // }
+
+    // deleteNurse = id => {
+    //     delete this.state.savedNurses[id]
+    // }
+
     componentDidMount(){
         // console.log("SAVED LIST: ComponentDidMount");
         //getAll from ApiManager and hang on to that data; put it in state

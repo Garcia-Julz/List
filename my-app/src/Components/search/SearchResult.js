@@ -46,6 +46,7 @@ class NurseCard extends Component {
                     onClick={this.saveNurse}
                     >
                         <span>Save</span>
+                    </button>
                     {/* </button>
                     <button 
                     type="button"
@@ -60,7 +61,21 @@ class NurseCard extends Component {
                     onClick={()=> this.props.history.push(`/mylist/details/${this.props.savedId}`)}
                     >
                         <span>Add Notes</span> */}
-                    </button>
+                    {/* <button 
+                    type="button"
+                    className="button2"
+                    onClick= {() => 
+                        this.props.deleteNurse(this.props.nurse.id)}
+                    >
+                        <span>Delete</span>
+                    </button> */}
+                    {/* <button 
+                    type="button"
+                    className="button2"
+                    onClick={this.saveNurse}
+                    >
+                        <span>Edit</span>
+                    </button> */}
                 </section>
               </div>
           </div>

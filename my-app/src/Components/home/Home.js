@@ -10,9 +10,9 @@ class Home extends Component {
         return (
             <>
             {isAuth
-            ? this.props.history.push("/mylist")
+            ? <SavedList/>
             :
-            <div>      
+            <div>     
             <div id="homeBackground" >
             </div>
             <div>
@@ -21,7 +21,7 @@ class Home extends Component {
                 <Link to={`/login`}><button className="btn btn-primary" >Login</button></Link>
                 </div>
             </div>
-            </div>
+            </div> 
             }
             </>
         )
