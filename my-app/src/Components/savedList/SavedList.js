@@ -4,9 +4,12 @@ import SavedCard from '../savedList/SavedResult';
 
 
 class SavedList extends Component {
+
+    currentUser = JSON.parse(localStorage.getItem("credentials"))
     
     state = {
-        savedNurses: []
+        savedNurses: [],
+        userId: this.currentUser.id
     }
     
     delete = id => {
@@ -68,6 +71,7 @@ class SavedList extends Component {
                 delete={this.delete}
                 nurseCard={nurse}
                 {...this.props}
+                // {...props}
                 />
             })}
         </div>
@@ -75,7 +79,7 @@ class SavedList extends Component {
             )
         } else {
             return (
-                <h1>Hello World</h1>
+                <h1></h1>
             )
         }
     }

@@ -40,20 +40,28 @@ class Login extends Component {
                             <h3>Please sign in</h3>
                             <div className="formgrid">
                                 <label htmlFor="inputEmail">Email: </label>
-                                <input onChange={this.handleFieldChange} type="email"
+                                <input 
+                                    onChange={this.handleFieldChange} 
+                                    type="email"
                                     id="email"
                                     placeholder="Email address"
-                                    required="" autoFocus="" />
+                                    required="" 
+                                    autoFocus="" />
 
-                                <label htmlFor="inputPassword">Password: </label>
-                                <input className="inputs" onChange={this.handleFieldChange} type="password"
+                                <label 
+                                    htmlFor="inputPassword">Password: 
+                                </label>
+                                <input 
+                                    className="inputs" 
+                                    onChange={this.handleFieldChange} 
+                                    type="password"
                                     id="password"
                                     placeholder="Password"
                                     required="" />
                             </div>
                             <button type="submit">
                                 Sign in
-                    </button>
+                            </button>
                         </fieldset>
                     </div>
                 </form>

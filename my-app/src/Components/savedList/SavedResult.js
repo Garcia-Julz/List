@@ -27,7 +27,7 @@ class SavedCard extends Component {
     // The bug can be worked around if you select the Mylist in the NavBar. this refreshes the page
     // and makes the push recognizible 
     render() {
-        console.log("sup", this.props.savedId)
+        console.log("sup", this.props)
         return (
           <div className="saved-container">
               <div className="result-card">

@@ -23,6 +23,12 @@
       "email": "Hello@hi.com",
       "password": "123",
       "id": 42
+    },
+    {
+      "name": "",
+      "email": "Rose1@rocks.com",
+      "password": "123",
+      "id": 43
     }
   ],
   "nurses": [
@@ -126,15 +132,70 @@
       "expireDate": null
     },
     {
-      "id": 9,
+      "id": 900,
       "stateId": 9,
-      "first": "Lanita",
-      "last": "Loffill",
-      "licenseNumber": "5567513259",
-      "licenseStatus": true,
-      "licenseType": "Analyst Programmer",
-      "issueDate": null,
-      "expireDate": null
+      "first": "TAWNYA",
+      "last": "HANSON",
+      "licenseNumber": "9359004",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Registered Nurse",
+      "issueDate": "3/29/13",
+      "expireDate": "7/31/20"
+    },
+    {
+      "id": 901,
+      "stateId": 9,
+      "first": "BARBARA",
+      "last": "HENRIQUEZ-GONZALEZ",
+      "licenseNumber": "1270212",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Registered Nurse",
+      "issueDate": "9/7/81",
+      "expireDate": "4/30/20"
+    },
+    {
+      "id": 902,
+      "stateId": 9,
+      "first": "SUZANNE",
+      "last": "MARTIN",
+      "licenseNumber": "1641352",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Registered Nurse",
+      "issueDate": "9/2/85",
+      "expireDate": "4/30/20"
+    },
+    {
+      "id": 903,
+      "stateId": 9,
+      "first": "MEREDITH",
+      "last": "PINK",
+      "licenseNumber": "9225256",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Registered Nurser",
+      "issueDate": "11/19/04",
+      "expireDate": "7/31/20"
+    },
+    {
+      "id": 904,
+      "stateId": 9,
+      "first": "RICHARD",
+      "last": "HEYDEMANN",
+      "licenseNumber": "3271062",
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Registered Nurse",
+      "issueDate": "4/22/98",
+      "expireDate": "4/30/21"
+    },
+    {
+      "id": 905,
+      "stateId": 9,
+      "first": "JESSICA",
+      "last": "CRONIN",
+      "licenseNumber": "9333341",
+      "licenseStatus": "INACTIVE",
+      "licenseType": "Registered Nurse",
+      "issueDate": "10/31/11",
+      "expireDate": "4/30/21"
     },
     {
       "id": 10,
@@ -252,10 +313,10 @@
       "first": "Vaclav",
       "last": "Rizzone",
       "licenseNumber": "7768463404",
-      "licenseStatus": false,
-      "licenseType": "Civil Engineer",
-      "issueDate": null,
-      "expireDate": null
+      "licenseStatus": "ACTIVE",
+      "licenseType": "Registered Nurse",
+      "issueDate": "01/05/1999",
+      "expireDate": "09/12/2020"
     },
     {
       "id": 21,
@@ -848,16 +909,46 @@
       "notes": "3456789000"
     },
     {
+      "id": 40,
       "nurseId": 1,
       "userId": 39,
-      "notes": "",
-      "id": 40
+      "notes": "You're Fired."
     },
     {
       "id": 44,
       "nurseId": 50,
       "userId": 42,
       "notes": "123443211234111"
+    },
+    {
+      "id": 46,
+      "nurseId": 901,
+      "userId": 41,
+      "notes": "Looking to apply in January"
+    },
+    {
+      "id": 47,
+      "nurseId": 905,
+      "userId": 41,
+      "notes": "She beat up an elderly disabled man to death."
+    },
+    {
+      "nurseId": 2,
+      "userId": 39,
+      "notes": "",
+      "id": 48
+    },
+    {
+      "nurseId": 20,
+      "userId": 39,
+      "notes": "",
+      "id": 49
+    },
+    {
+      "id": 50,
+      "nurseId": 50,
+      "userId": 41,
+      "notes": "hey this expires soon"
     }
   ]
 }
