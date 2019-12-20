@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import './Home.css'
 // import { Link } from "react-router-dom";
+import './home.css'
 import SavedList from '../savedList/SavedList';
 import HomeSlides from './HomeSlides'
 

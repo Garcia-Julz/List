@@ -14,9 +14,9 @@ const Card = () =>
 
     <Link to={`/login`}><button className="btn btn-primary" >Login</button></Link>
 
-    <footer>
+    <footer className="credits">
       <a href='https://github.com/u2ix/react-background-slider/blob/master/example/README.md'>
-          Image Credits</a>
+          Background credit</a>
     </footer>
   </div>
 
