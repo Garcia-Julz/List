@@ -58,7 +58,7 @@ class SavedList extends Component {
         if (this.state.savedNurses.length !== 0) {
             return (
                 <> 
-        <div className="card-container">
+        <div className="saved-container">
             {this.state.savedNurses.map(nurse => {
                 // console.log("hello", nurse)
             return <SavedCard

@@ -25,15 +25,13 @@ class NurseCard extends Component {
     render() {
         console.log("props",this.props)
         return (
-          <div className="card">
-              <div className="card-content">
+          <div className="result-content">
+              <div className="saved-card">
                 {/* <picture> **** stretch goal! ****
                   <img src={require('./image goes here')} alt="this alt tag is for metadata as well" />
                 </picture> */}
-                <p>First: <span className="card-ownername">
-                {this.props.nurse.first}</span></p>
-                <p>Last: <span className="card-ownername">
-                {this.props.nurse.last}</span></p>
+                <p>First: {this.props.nurse.first}</p>
+                <p>Last: {this.props.nurse.last}</p>
                 <p>Status: {this.props.nurse.licenseStatus}</p>
                 <p>License Type: {this.props.nurse.licenseType}</p>
                 <p>Issued: {this.props.nurse.issueDate}</p>

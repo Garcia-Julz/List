@@ -4,13 +4,10 @@ import { Link } from "react-router-dom";
 
 const Card = () =>
   <div className='card'>
-    <view>
         <header>
-        <h1>Validate</h1>
-        <h1>With</h1>
+        <h1>Validate With</h1>
         <h1>Confidence</h1>
         </header>
-    </view>
 
     <Link to={`/login`}><button className="btn btn-primary" >Login</button></Link>
 
