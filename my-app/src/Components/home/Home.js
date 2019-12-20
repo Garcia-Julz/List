@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 // import './Home.css'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import SavedList from '../savedList/SavedList';
+import HomeSlides from './HomeSlides'
 
 class Home extends Component {
     render() {
@@ -12,16 +13,24 @@ class Home extends Component {
             {isAuth
             ? <SavedList/>
             :
-            <div>     
-            <div id="homeBackground" >
-            </div>
-            <div>
-                <h1 id="welcomeHomePageHeader">Validate With Confidence</h1>
-                <div id="loginButton">
-                <Link to={`/login`}><button className="btn btn-primary" >Login</button></Link>
-                </div>
-            </div>
-            </div> 
+              <HomeSlides/>
+            // <div>
+            //     <div>     
+            //         <header className="v-header container" id="homeBackground" >
+            //             <h1><span>&lt;</span>Validate With Confidence</h1>
+            //             <h1><span>&lt;</span>With</h1>
+            //             <h1><span>&lt;</span>Confidence</h1>
+            //         </header>
+            //     </div>
+            //     <div>
+            //         <div id="loginButton">
+            //         <Link to={`/login`}><button className="btn btn-primary" >Login</button></Link>
+            //         </div>
+            //     </div>
+            //     <footer>
+            //         <a href='https://github.com/u2ix/react-background-slider/blob/master/example/README.md'>Image Credits</a>
+            //     </footer>
+            // </div> 
             }
             </>
         )

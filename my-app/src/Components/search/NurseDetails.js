@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
+// import * as firebase from '../../../src/FirebaseFiles';
+// import 'firebase/storage';
 
 class NurseCardNotes extends Component {
 
