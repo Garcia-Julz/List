@@ -1,108 +1,177 @@
-// import React, { Component } from 'react';
-// import Banner from './AboutAssets/Banner.jpeg'
-// import 'About.css'
+import React, { Component } from 'react';
+import Banner from './AboutAssets/Banner.jpeg'
+import './About.css'
 
 
-// class AboutPage extends Component {
+class AboutPage extends Component {
     
-//                 render() {
-//                 return (
-//             <div>
-//                 <div classNameName="w3-top">
-//                     <div className="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-//                         <a href="#home" className="w3-bar-item w3-button">Gourmet au Catering</a>
-//                         <div className="w3-right w3-hide-small">
-//                         <a href="#about" className="w3-bar-item w3-button">About</a>
-//                         <a href="#menu" className="w3-bar-item w3-button">Menu</a>
-//                         <a href="#contact" className="w3-bar-item w3-button">Contact</a>
-//                     </div>
-//                 </div>
-//             </div>
+            render() {
+                return (
+                    <>
+                    {/* // <!-- First Parallax Image with Logo Text --> */}
+                    <div className="bgimg-1 w3-display-container w3-opacity-min" id="home">
+                      <div className="w3-display-middle">
+                        <span className="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">ALL <span className="w3-hide-small">IN</span> ONE</span>
+                      </div>
+                    </div>
+                    
+                    {/* // <!-- Container (About Section) --> */}
+                    <div className="w3-content w3-container w3-padding-64" id="about">
+                      <h3 className="w3-center">ABOUT ME</h3>
+                      <p className="w3-center"><em>I love photography</em></p>
+                      <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <div className="w3-row">
+                        <div className="w3-col m6 w3-center w3-padding-large">
+                          <p><b><i className="fa fa-user w3-margin-right"></i>My Name</b></p>
+                          <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" className="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333"></img>
+                        </div>
+                    
+                        {/* <!-- Hide this text on small devices --> */}
+                        <div className="w3-col m6 w3-hide-small w3-padding-large">
+                          <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                      </div>
+                      <p className="w3-large w3-center w3-padding-16">Im really good at:</p>
+                      <p className="w3-wide"><i className="fa fa-camera"></i>Photography</p>
+                      <div className="w3-light-grey">
+                        <div className="containerPaddingGreyCenter90">90%</div>
+                      </div>
+                      <p className="w3-wide"><i className="fa fa-laptop"></i>Web Design</p>
+                      <div className="w3-light-grey">
+                        <div className="containerPaddingGreyCenter85">85%</div>
+                      </div>
+                      <p className="w3-wide"><i className="fa fa-photo"></i>Photoshop</p>
+                      <div className="w3-light-grey">
+                        <div className="containerPaddingGreyCenter75">75%</div>
+                      </div>
+                    </div>
+                    
+                    <div className="w3-row w3-center w3-dark-grey w3-padding-16">
+                      <div className="w3-quarter w3-section">
+                        <span className="w3-xlarge">14+</span>
+                        Partners
+                      </div>
+                      <div className="w3-quarter w3-section">
+                        <span className="w3-xlarge">55+</span>
+                        Projects Done
+                      </div>
+                      <div className="w3-quarter w3-section">
+                        <span className="w3-xlarge">89+</span>
+                        Happy Clients
+                      </div>
+                      <div className="w3-quarter w3-section">
+                        <span className="w3-xlarge">150+</span>
+                        Meetings
+                      </div>
+                    </div>
+                    
+                    {/* // Second Parallax Image with Portfolio Text */}
+                    <div className="bgimg-2 w3-display-container w3-opacity-min">
+                      <div className="w3-display-middle">
+                        <span className="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+                      </div>
+                    </div>
+                    
+                    {/* <!-- Container (Portfolio Section) --> */}
+                    <div className="w3-content w3-container w3-padding-64" id="portfolio">
+                      <h3 className="w3-center">MY WORK</h3>
+                      <p className="w3-center"><em>Here are some of my latest lorem work ipsum tipsum. Click on the images to make them bigger</em></p>
+                    
+                      {/* <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) --> */}
+                      <div className="w3-row-padding w3-center">
+                        <div className="w3-col m3">
+                          <img src="https://www.w3schools.com/w3images/p1.jpg" onclick="onClick(this)" className="w3-hover-opacity" alt="The mist over the mountains"></img>
+                        </div>
+                    
+                        <div className="w3-col m3">
+                          <img src="https://www.w3schools.com/w3images/p2.jpg" onclick="onClick(this)" className="w3-hover-opacity" alt="Coffee beans"></img>
+                        </div>
+                    
+                        <div className="w3-col m3">
+                          <img src="https://www.w3schools.com/w3images/p3.jpg" onclick="onClick(this)" className="w3-hover-opacity" alt="Bear closeup"></img>
+                        </div>
+                    
+                        <div className="w3-col m3">
+                          <img src="https://www.w3schools.com/w3images/p4.jpg" onclick="onClick(this)" className="w3-hover-opacity" alt="Quiet ocean"></img>
+                        </div>
+                      </div>
+                    
+                      <div className="w3-row-padding w3-center w3-section">
+                        <div className="w3-col m3">
+                          <img src="https://www.w3schools.com/w3images/p5.jpg" onclick="onClick(this)" className="w3-hover-opacity" alt="The mist"></img>
+                        </div>
+                    
+                        <div className="w3-col m3">
+                          <img src="https://www.w3schools.com/w3images/p6.jpg" onclick="onClick(this)" className="w3-hover-opacity" alt="My beloved typewriter"></img>
+                        </div>
+                    
+                        <div className="w3-col m3">
+                          <img src="https://www.w3schools.com/w3images/p7.jpg" onclick="onClick(this)" className="w3-hover-opacity" alt="Empty ghost train"></img>
+                        </div>
+                    
+                        <div className="w3-col m3">
+                          <img src="https://www.w3schools.com/w3images/p8.jpg" onclick="onClick(this)" className="w3-hover-opacity" alt="Sailing"></img>
+                        </div>
+                        <button className="w3-buttonLargeLight-grey">LOAD MORE</button>
+                      </div>
+                    </div>
+                    
+                    // {/* <!-- Modal for full size images on click--> */}
+                    <div id="modal01" className="w3-modal w3-black" onclick="this.style.display='none'">
+                      <span className="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i className="fa fa-remove"></i></span>
+                      <div className="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                        <img id="img01" className="w3-image"></img>
+                        <p id="caption" className="w3-opacity w3-large"></p>
+                      </div>
+                    </div>
+                    
+                    // {/* <!-- Third Parallax Image with Portfolio Text --> */}
+                    <div className="bgimg-3 w3-display-container w3-opacity-min">
+                      <div className="w3-display-middle">
+                         <span className="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+                      </div>
+                    </div>
+                    
+                    // {/* <!-- Container (Contact Section) --> */}
+                    <div className="w3-content w3-container w3-padding-64" id="contact">
+                      <h3 className="w3-center">WHERE I WORK</h3>
+                      <p className="w3-center"><em>I'd love your feedback!</em></p>
+                    
+                      <div className="w3-row w3-padding-32 w3-section">
+                        <div className="w3-col m4 w3-container">
+                          <img src="https://www.w3schools.com/w3images/map.jpg" className="w3-image-round"></img>
+                        </div>
+                        <div className="w3-col m8 w3-panel">
+                          <div className="w3-large w3-margin-bottom">
+                            <i className="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US
+                            <i className="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515
+                            <i className="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com
+                          </div>
+                          <p>Swing by for a cup of <i className="fa fa-coffee"></i>, or leave me a note:</p>
+                          <form action="/action_page.php" target="_blank">
+                            <div className="w3-row-padding">
+                              <div className="w3-half">
+                                <input className="w3-input w3-border" type="text" placeholder="Name" required name="Name"/>
+                              </div>
+                              <div className="w3-half">
+                                <input className="w3-input w3-border" type="text" placeholder="Email" required name="Email"/>
+                              </div>
+                            </div>
+                            <input className="w3-input w3-border" type="text" placeholder="Message" required name="Message"/>
+                            <button className="w3-button w3-black w3-right w3-section" type="submit">
+                              <i className="fa fa-paper-plane"></i> SEND MESSAGE
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    </>
+        )
+    }
+}
 
-                
-//             <header className="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-//                 <img className="w3-image" src={Banner} alt="Hamburger Catering" width="1600" height="800"></img>
-//                 <div className="w3-display-bottomleft w3-padding-large w3-opacity">
-//                     <h1 className="w3-xxlarge">Le Catering</h1>
-//                 </div>
-//             </header>
-
-//             <div className="w3-content" style="max-width:1100px">
-                
-//                 <div className="w3-row w3-padding-64" id="about">
-//                     <div className="w3-col m6 w3-padding-large w3-hide-small">
-//                         <img 
-//                         src="/w3images/tablesetting2.jpg" 
-//                         className="w3-round w3-image w3-opacity-min" 
-//                         alt="Table Setting" 
-//                         width="600" 
-//                         height="750"> 
-//                         </img>
-//                         </div>
-                
-//                         <div className="w3-col m6 w3-padding-large">
-//                         <h1 className="w3-center">About Catering</h1>
-//                         <h5 className="w3-center">Tradition since 1889</h5>
-//                         <p className="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet,
-//                             consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-//                             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-//                             consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-//                             pariatur.We only use <span className="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-//                         <p className="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in
-//                             culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-//                             temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-//                             laboris nisi ut aliquip ex ea commodo consequat.</p>
-//                         </div>
-//                     </div>
-                
-                
-//                     <div className="w3-row w3-padding-64" id="menu">
-//                         <div className="w3-col l6 w3-padding-large">
-//                         <h1 className="w3-center">Our Menu</h1>
-//                         <h4>Bread Basket</h4>
-//                         <p className="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p>
-                
-//                         <h4>Honey Almond Granola with Fruits</h4>
-//                         <p className="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
-                
-//                         <h4>Belgian Waffle</h4>
-//                         <p className="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p>
-                
-//                         <h4>Scrambled eggs</h4>
-//                         <p className="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
-                
-//                         <h4>Blueberry Pancakes</h4>
-//                         <p className="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
-//                         </div>
-                
-//                         <div className="w3-col l6 w3-padding-large">
-//                         <img src="/w3images/tablesetting.jpg" className="w3-round w3-image w3-opacity-min" alt="Menu"
-//                             style="width:100%"></img>
-//                         </div>
-//                     </div>
-                
-                
-//                     <div className="w3-container w3-padding-64" id="contact">
-//                         <h1>Contact</h1>
-//                         <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the
-//                         food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
-//                         <p className="w3-text-blue-grey w3-large">Catering Service, 42nd Living St, 43043 New York, NY</p>
-//                         <p>You can also contact us by phone or email or you can send us a message here</p>
-//                         <form action="/action_page.php" target="_blank">
-//                         <p><input className="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"/></p>
-//                         <p><input className="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"/> */}
-//                         </p>
-//                         <p><input className="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required
-//                             name="date" value="2017-11-16T20:00"/></p>
-//                         <p><input className="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required
-//                             name="Message"/></p>
-//                         <p><button className="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
-//                         </form>
-//                     </div>
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
-
-// export default AboutPage 
+export default AboutPage 
