@@ -14,17 +14,18 @@ body, html {
 }
 
 .bgimg-1 {
-  background-image: url("https://www.w3schools.com/w3images/parallax1.jpg");
+  background-image: url(./AboutAssets/Banner.jpeg);
   min-height: 770px;
 }
 
 .bgimg-2 {
-  background-image: url("https://www.w3schools.com/w3images/parallax2.jpg");
+  /* background-image: url("https://www.w3schools.com/w3images/parallax2.jpg"); */
+  background-image: url(./AboutAssets/Banner2.jpeg);
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("https://www.w3schools.com/w3images/parallax3.jpg");
+  background-image: url(./AboutAssets/Banner3.jpeg);
   min-height: 400px;
 }
 
