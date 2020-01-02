@@ -3,6 +3,7 @@ import React, { Component } from "react";
 // *****************  HOME  ***********************
 import Home from "./home/Home";
 import Login from "./auth/Login";
+import About from './About/About'
 import Registration from "./auth/RegisterAccount";
 // // *****************  FORM  ***********************
 // import ArticlesForm from "./articles/ArticlesForm";
@@ -123,7 +124,7 @@ export default class ApplicationViews extends Component {
             {...props} />
         }}
         /> */}
-        {/* EVENTS */}
+        {/* ABOUT */}
         {/* <Route
           exact path="/events" render={props => {
             if (this.props.user) {
@@ -135,12 +136,14 @@ export default class ApplicationViews extends Component {
               return <Redirect to="login" />
             }
           }}
-        />
-        <Route path="/events/new" render={props => {
-          return <EventForm {...props} />
+        /> */}
+        <Route path="/about" render={props => {
+          return <About 
+          {...this.props}
+          {...props} />
         }}
         />
-        <Route path="/events/:eventId(\d+)/edit" render={props => {
+        {/* <Route path="/events/:eventId(\d+)/edit" render={props => {
           return <EventEditForm {...props} />
         }}
         /> */}

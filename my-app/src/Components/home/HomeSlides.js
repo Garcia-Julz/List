@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import BackgroundSlider from '../../lib/BackgroundSlider'
 
 import Card from './Card'
+// import Login from '../auth/Login'
 
 import image1 from '../HomeAssets/image1.jpeg'
 import image2 from '../HomeAssets/image2.jpeg'
@@ -16,6 +17,7 @@ class HomeSlides extends Component {
       <div className='App'>
         <div className='card-container'>
           <Card />
+          {/* <Login /> */}
         </div>
 
         <BackgroundSlider

@@ -1,0 +1,14 @@
+.oopsMessageContainer {
+    /* display: flex;
+    justify-content: center; */
+}
+
+.oopsMessage {
+    width: 50%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

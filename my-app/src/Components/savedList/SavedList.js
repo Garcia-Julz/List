@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 import SavedCard from '../savedList/SavedResult';
-
+import oops from './unsaved_image.png'
+import './SavedList.css'
 
 class SavedList extends Component {
 
@@ -79,7 +80,11 @@ class SavedList extends Component {
             )
         } else {
             return (
-                <h1></h1>
+                <div className="oopsMessageContainer">
+                    <div className="oopsMessage">
+                        <img src={oops}></img>
+                    </div>
+                </div>
             )
         }
     }
