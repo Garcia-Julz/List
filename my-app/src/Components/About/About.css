@@ -21,12 +21,12 @@ body, html {
 .bgimg-2 {
   /* background-image: url("https://www.w3schools.com/w3images/parallax2.jpg"); */
   background-image: url(./AboutAssets/Banner2.jpeg);
-  min-height: 400px;
+  min-height: 500px;
 }
 
 .bgimg-3 {
   background-image: url(./AboutAssets/Banner3.jpeg);
-  min-height: 400px;
+  min-height: 500px;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -69,4 +69,20 @@ body, html {
 
 .w3-row-padding {
     margin:0 -16px 8px -16px
+}
+
+#ExcelLogo {
+    padding-left: 30px;
+    border-right-width: 15px;
+    padding-right: 30px;
+}
+
+#ReactLogo {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#npmLogo {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
