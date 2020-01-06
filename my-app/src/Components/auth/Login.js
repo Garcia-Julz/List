@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import ApiManager from '../modules/ApiManager';
+import './Login.css';
 
 class Login extends Component {
 
@@ -23,7 +25,7 @@ class Login extends Component {
     .then(results=>{
         if(results.length>0) {
             this.props.setUser(results[0])
-            this.props.history.push("/");
+            this.props.history.push("/mylist");
         } else {
             alert("Incorrect username, email, or password")
         } 
@@ -33,30 +35,49 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="login-card">
+            <div className="loginCardContainer">
+            <div className="loginCard">
                 <form onSubmit={this.handleLogin}>
-                    <div>
+                    <div className="loginFieldset">
+                        <div>
                         <fieldset>
+                            <div className="cardTitle">
                             <h3>Please sign in</h3>
-                            <div className="formgrid">
-                                <label htmlFor="inputEmail">Email: </label>
-                                <input onChange={this.handleFieldChange} type="email"
+                            </div>
+                            <div className="loginFormgrid">
+                                <label htmlFor="inputEmail">Username: </label>
+                                <input 
+                                    onChange={this.handleFieldChange} 
+                                    type="email"
                                     id="email"
                                     placeholder="Email address"
-                                    required="" autoFocus="" />
+                                    required="" 
+                                    autoFocus="" />
 
-                                <label htmlFor="inputPassword">Password: </label>
-                                <input className="inputs" onChange={this.handleFieldChange} type="password"
+                                <label 
+                                    htmlFor="inputPassword">Password: 
+                                </label>
+                                <input 
+                                    className="inputs" 
+                                    onChange={this.handleFieldChange} 
+                                    type="password"
                                     id="password"
                                     placeholder="Password"
                                     required="" />
                             </div>
-                            <button type="submit">
-                                Sign in
-                    </button>
+                            <div className="loginButtons">
+                                <button type="submit" className="loginButton">
+                                    Sign in
+                                </button>
+                                <Link to={`/register`}><button className="loginButton">
+                                    Register
+                                </button></Link>
+                            </div>
                         </fieldset>
+                        </div>
                     </div>
                 </form>
+            </div>
             </div>
         )
     }

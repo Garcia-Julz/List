@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SavedList.css'
 // import ApiManager from '../modules/ApiManager';
 
 class SavedCard extends Component {
@@ -7,29 +8,21 @@ class SavedCard extends Component {
         savedNurses: []
     }
 
-    // saveNurse = evt => {
-    //     evt.preventDefault();
-    //     const nurse = {
-    //         nurseId: this.props.nurse.id,
-    //         userId: Number(localStorage.getItem("credentials")),
-    //         notes: ""
-    //     }
-    //     ApiManager.post("saved", nurse)
-    //     .then(() =>
-    //         this.props.history.push("/mylist"));
-    // }
+    // Ask about the error I am getting when I log in as RandomSource, then when I am redirected to my
+    // list I can not Edit any card cause push is undefined. I consol loged to see that the UserId is
+    // coming back with the correct numerical value
 
+    // The bug can be worked around if you select the Mylist in the NavBar. this refreshes the page
+    // and makes the push recognizible 
     render() {
         return (
-          <div className="card">
-              <div className="card-content">
+          <div className="savedCard">
+              <div className="resultCardContent">
                 {/* <picture> **** stretch goal! ****
                   <img src={require('./image goes here')} alt="this alt tag is for metadata as well" />
                 </picture> */}
-                <p>First: <span className="card-ownername">
-                {this.props.nurse.first}</span></p>
-                <p>Last: <span className="card-ownername">
-                {this.props.nurse.last}</span></p>
+                <p>First: {this.props.nurse.first}</p>
+                <p>Last: {this.props.nurse.last}</p>
                 <p>Status: {this.props.nurse.licenseStatus}</p>
                 <p>License Type: {this.props.nurse.licenseType}</p>
                 <p>Issued: {this.props.nurse.issueDate}</p>

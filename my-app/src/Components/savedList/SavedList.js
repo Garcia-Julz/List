@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
 import SavedCard from '../savedList/SavedResult';
-
+import oops from './unsaved_image.png'
+import './SavedList.css'
 
 class SavedList extends Component {
+
+    currentUser = JSON.parse(localStorage.getItem("credentials"))
     
     state = {
-        savedNurses: []
+        savedNurses: [],
+        userId: this.currentUser.id
     }
     
     delete = id => {
@@ -22,23 +26,6 @@ class SavedList extends Component {
         })
         })
     }
-
-    // deleteNurse = id => {
-    //     // handles deleting a single event from events array and renders updated array to the DOM
-    //     ApiManager.delete("saved", id)
-    //         .then(() => {
-    //             ApiManager.getAllforLoggedInUser(userId, "saved")
-    //                 .then((updateSavedList) => {
-    //                     this.setState({
-    //                         savedNurses: updateSavedList
-    //                     })
-    //                 })
-    //         })
-    // }
-
-    // deleteNurse = id => {
-    //     delete this.state.savedNurses[id]
-    // }
 
     componentDidMount(){
         // console.log("SAVED LIST: ComponentDidMount");
@@ -58,7 +45,7 @@ class SavedList extends Component {
         if (this.state.savedNurses.length !== 0) {
             return (
                 <> 
-        <div className="card-container">
+        <div className="savedContainer">
             {this.state.savedNurses.map(nurse => {
                 // console.log("hello", nurse)
             return <SavedCard
@@ -68,6 +55,7 @@ class SavedList extends Component {
                 delete={this.delete}
                 nurseCard={nurse}
                 {...this.props}
+                // {...props}
                 />
             })}
         </div>
@@ -75,7 +63,11 @@ class SavedList extends Component {
             )
         } else {
             return (
-                <h1>Hello World</h1>
+                <div className="oopsMessageContainer">
+                    <div className="oopsMessage">
+                        <img src={oops}></img>
+                    </div>
+                </div>
             )
         }
     }

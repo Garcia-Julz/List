@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ApiManager from '../modules/ApiManager';
+// import * as firebase from '../../../src/FirebaseFiles';
+// import 'firebase/storage';
 
 class NurseCardNotes extends Component {
 
@@ -62,8 +64,8 @@ class NurseCardNotes extends Component {
     render() {
         // console.log(this.props.match.params.savedNurseId)
         return (
-        <div className="card" id="card-container">
-            <div className="card-content" id="card-content">
+        <div className="details-container">
+            <div className="details-card">
             {/* <picture id="card-image">
                 <img src={require('./dog.svg')} alt="My Dog" />
             </picture> */}
