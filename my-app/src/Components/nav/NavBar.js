@@ -15,23 +15,24 @@ class NavBar extends Component {
         return (
             <nav className="navbar bg-dark text-white flex-md-nowrap p-0 shadow">
                 <img src={NavLogo} 
-                className="NavLogo"></img>
+                    className="NavLogo">
+                </img>
                 <ul className="nav nav-pills nav-fill">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/search">Search</Link>
+                        <Link className="nav-link" id="nav-Links" to="/search">Search</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/mylist">My List</Link>
+                        <Link className="nav-link" id="nav-Links" to="/mylist">My List</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/about">About us</Link>
+                        <Link className="nav-link" id="nav-Links" to="/about">About us</Link>
                     </li>
                 </ul>
                 <span className="navbar-text">
                     <ul className="nav nav-pills nav-fill">
-                        <li><Link className="nav-link" to="/" onClick={this.handleLogout}>Logout</Link></li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/register">Register</Link></li>
+                        <li><Link className="nav-link" id="nav-Links" to="/" onClick={this.handleLogout}>Logout</Link></li>
+                        {/* <li className="nav-item">
+                            <Link className="nav-link" id="nav-Links" to="/register">Register</Link></li> */}
                     </ul>
                 </span>
             </nav>

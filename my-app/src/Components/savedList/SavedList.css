@@ -12,3 +12,18 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+.savedContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.savedCard {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+

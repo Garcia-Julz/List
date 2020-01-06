@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SavedList.css'
 // import ApiManager from '../modules/ApiManager';
 
 class SavedCard extends Component {
@@ -7,19 +8,6 @@ class SavedCard extends Component {
         savedNurses: []
     }
 
-    // saveNurse = evt => {
-    //     evt.preventDefault();
-    //     const nurse = {
-    //         nurseId: this.props.nurse.id,
-    //         userId: Number(localStorage.getItem("credentials")),
-    //         notes: ""
-    //     }
-    //     ApiManager.post("saved", nurse)
-    //     .then(() =>
-    //         this.props.history.push("/mylist"));
-    // }
-
-
     // Ask about the error I am getting when I log in as RandomSource, then when I am redirected to my
     // list I can not Edit any card cause push is undefined. I consol loged to see that the UserId is
     // coming back with the correct numerical value
@@ -27,10 +15,9 @@ class SavedCard extends Component {
     // The bug can be worked around if you select the Mylist in the NavBar. this refreshes the page
     // and makes the push recognizible 
     render() {
-        console.log("sup", this.props)
         return (
-          <div className="saved-container">
-              <div className="result-card">
+          <div className="savedCard">
+              <div className="resultCardContent">
                 {/* <picture> **** stretch goal! ****
                   <img src={require('./image goes here')} alt="this alt tag is for metadata as well" />
                 </picture> */}
